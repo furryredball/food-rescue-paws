@@ -1,6 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="Completion badge placeholder">
-  <circle cx="100" cy="100" r="92" fill="#fff1d6" stroke="#c47b1a" stroke-width="8"/>
-  <circle cx="100" cy="100" r="68" fill="#3f8a4a"/>
-  <path d="M100 58l10 28h30l-24 18 9 28-25-17-25 17 9-28-24-18h30z" fill="#fff"/>
-  <text x="100" y="175" text-anchor="middle" font-family="Trebuchet MS,sans-serif" font-size="16" fill="#6a470f">Badge</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="Completion badge">
+  <circle cx="100" cy="100" r="90" fill="#FFD43B" stroke="#111" stroke-width="8"/>
+  <circle cx="100" cy="100" r="64" fill="#5BC380" stroke="#111" stroke-width="6"/>
+  <path d="M100 58l10 28h30l-24 18 9 28-25-17-25 17 9-28-24-18h30z" fill="#FFF8F0" stroke="#111" stroke-width="4" stroke-linejoin="round"/>
 </svg>

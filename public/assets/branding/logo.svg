@@ -1,9 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="Food Rescue Paws logo placeholder">
-  <rect width="200" height="200" rx="40" fill="#e8f5df"/>
-  <circle cx="100" cy="110" r="28" fill="#3f8a4a"/>
-  <circle cx="58" cy="72" r="16" fill="#57a55f"/>
-  <circle cx="142" cy="72" r="16" fill="#57a55f"/>
-  <circle cx="68" cy="138" r="14" fill="#57a55f"/>
-  <circle cx="132" cy="138" r="14" fill="#57a55f"/>
-  <text x="100" y="188" text-anchor="middle" font-family="Trebuchet MS,sans-serif" font-size="18" fill="#2f6b3a">Food Rescue Paws</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="Food Rescue Paws logo">
+  <rect width="200" height="200" rx="28" fill="#FFD43B" stroke="#111" stroke-width="8"/>
+  <circle cx="100" cy="108" r="28" fill="#5BC380" stroke="#111" stroke-width="6"/>
+  <circle cx="58" cy="70" r="16" fill="#5BC380" stroke="#111" stroke-width="6"/>
+  <circle cx="142" cy="70" r="16" fill="#5BC380" stroke="#111" stroke-width="6"/>
+  <circle cx="68" cy="138" r="14" fill="#5BC380" stroke="#111" stroke-width="6"/>
+  <circle cx="132" cy="138" r="14" fill="#5BC380" stroke="#111" stroke-width="6"/>
 </svg>

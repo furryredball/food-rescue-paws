@@ -17,6 +17,7 @@ export function CompletionScreen({
       className="screen screen--completion"
       aria-labelledby="completion-title"
     >
+      <span className="sticker sticker--coral">You did it</span>
       <SafeImage
         path="branding/badge.svg"
         alt=""
@@ -34,7 +35,7 @@ export function CompletionScreen({
         className="btn btn--primary btn--xl"
         onClick={onPlayAgain}
       >
-        Play again
+        Play again →
       </button>
     </section>
   )

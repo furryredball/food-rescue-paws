@@ -14,17 +14,38 @@ export function InstructionsScreen({
       className="screen screen--instructions"
       aria-labelledby="instructions-title"
     >
-      <h1 id="instructions-title">How to play</h1>
+      <span className="sticker sticker--orange">How to play</span>
+      <h1 id="instructions-title">Look closely. Choose carefully.</h1>
       <ol className="instruction-list">
-        <li>Look at the food photo, name and preparation details.</li>
-        <li>Tap optional clues if you want a hint.</li>
         <li>
-          Choose who it might be for: Dog, Cat, Both, Neither, or Ask a
-          grown-up.
+          <span className="instruction-list__num" aria-hidden="true">
+            1
+          </span>
+          <span>Look at the food photo, name and preparation details.</span>
         </li>
         <li>
-          Earn one paw for each of {cardCount} foods you finish. You can try
-          again if your first guess needs another look.
+          <span className="instruction-list__num" aria-hidden="true">
+            2
+          </span>
+          <span>Tap optional clues if you want a hint.</span>
+        </li>
+        <li>
+          <span className="instruction-list__num" aria-hidden="true">
+            3
+          </span>
+          <span>
+            Choose who it might be for: Dog, Cat, Both, Neither, or Ask a
+            grown-up.
+          </span>
+        </li>
+        <li>
+          <span className="instruction-list__num" aria-hidden="true">
+            4
+          </span>
+          <span>
+            Earn one paw for each of {cardCount} foods you finish. You can try
+            again if your first guess needs another look.
+          </span>
         </li>
       </ol>
       <p className="reminder">
@@ -39,7 +60,7 @@ export function InstructionsScreen({
           className="btn btn--primary"
           onClick={onContinue}
         >
-          Let’s go
+          Let’s go →
         </button>
       </div>
     </section>

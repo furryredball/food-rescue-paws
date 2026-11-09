@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 240" role="img" aria-label="Grapes placeholder">
-  <rect width="320" height="240" rx="24" fill="#e0d4f7"/>
-  <rect x="36" y="36" width="248" height="168" rx="18" fill="#fff" fill-opacity="0.55"/>
-  <text x="160" y="125" text-anchor="middle" font-family="Trebuchet MS,sans-serif" font-size="28" font-weight="700" fill="#2f6b3a">Grapes</text>
-  <text x="160" y="158" text-anchor="middle" font-family="Trebuchet MS,sans-serif" font-size="16" fill="#4a6352">Placeholder photo</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 240" role="img" aria-label="Grapes">
+  <rect width="320" height="240" rx="24" fill="#A3D5E8" stroke="#111" stroke-width="8"/>
+  <rect x="36" y="40" width="248" height="160" rx="18" fill="#fff" stroke="#111" stroke-width="6"/>
+  <text x="160" y="120" text-anchor="middle" font-family="Archivo Black, Nunito, sans-serif" font-size="34" fill="#111">Grapes</text>
+  <text x="160" y="158" text-anchor="middle" font-family="Nunito, sans-serif" font-size="16" font-weight="800" fill="#333">Food card</text>
 </svg>

@@ -32,8 +32,12 @@ export function InspectionScreen({
     >
       <header className="screen-header">
         <p className="eyebrow">
-          Food {cardNumber} of {totalCards}
-          {card.reviewStatus === 'draft' ? ' · Draft card' : ''}
+          <span className="sticker sticker--black">
+            Food {cardNumber}/{totalCards}
+          </span>
+          {card.reviewStatus === 'draft' ? (
+            <span className="sticker sticker--yellow">Draft</span>
+          ) : null}
         </p>
         <ProgressPaws earned={pawsEarned} total={totalCards} />
       </header>

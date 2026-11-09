@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="Pip the dog placeholder">
+  <circle cx="100" cy="100" r="92" fill="#f3e2c6"/>
+  <ellipse cx="100" cy="120" rx="48" ry="40" fill="#d8b07a"/>
+  <circle cx="78" cy="108" r="6" fill="#1f3324"/>
+  <circle cx="122" cy="108" r="6" fill="#1f3324"/>
+  <ellipse cx="100" cy="126" rx="10" ry="7" fill="#1f3324"/>
+  <ellipse cx="48" cy="78" rx="22" ry="28" fill="#c99555"/>
+  <ellipse cx="152" cy="78" rx="22" ry="28" fill="#c99555"/>
+  <text x="100" y="185" text-anchor="middle" font-family="Trebuchet MS,sans-serif" font-size="18" fill="#2f6b3a">Pip</text>
+</svg>

@@ -1,0 +1,82 @@
+:root {
+  color-scheme: light;
+  --bg-top: #f3f8ef;
+  --bg-bottom: #e4f0d8;
+  --bg-glow: #cfe6b8;
+  --surface: rgba(255, 252, 246, 0.92);
+  --ink: #1f3324;
+  --ink-soft: #4a6352;
+  --line: #b7d0a4;
+  --green-700: #2f6b3a;
+  --green-600: #3f8a4a;
+  --green-500: #57a55f;
+  --green-100: #e8f5df;
+  --amber: #c47b1a;
+  --amber-soft: #fff1d6;
+  --rose: #a14b4b;
+  --rose-soft: #f8e4e4;
+  --shadow: 0 18px 40px rgba(47, 107, 58, 0.12);
+  --radius: 1.25rem;
+  --touch: 3rem; /* 48px */
+  --font-display: 'Trebuchet MS', 'Segoe UI', sans-serif;
+  --font-body: 'Segoe UI', 'Helvetica Neue', sans-serif;
+  font-family: var(--font-body);
+  line-height: 1.45;
+  font-weight: 500;
+  color: var(--ink);
+  background: var(--bg-top);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background:
+    radial-gradient(circle at 12% 8%, var(--bg-glow), transparent 42%),
+    radial-gradient(circle at 88% 0%, #fff8e8, transparent 36%),
+    linear-gradient(165deg, var(--bg-top), var(--bg-bottom));
+}
+
+button,
+input {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+code {
+  font-size: 0.9em;
+  word-break: break-all;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}

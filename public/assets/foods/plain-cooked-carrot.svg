@@ -1,6 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 240" role="img" aria-label="Carrot">
-  <rect width="320" height="240" rx="24" fill="#FF8A3D" stroke="#111" stroke-width="8"/>
-  <rect x="36" y="40" width="248" height="160" rx="18" fill="#fff" stroke="#111" stroke-width="6"/>
-  <text x="160" y="120" text-anchor="middle" font-family="Archivo Black, Nunito, sans-serif" font-size="34" fill="#111">Carrot</text>
-  <text x="160" y="158" text-anchor="middle" font-family="Nunito, sans-serif" font-size="16" font-weight="800" fill="#333">Food card</text>
-</svg>

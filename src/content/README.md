@@ -26,7 +26,25 @@ Placeholders you may see: `{count}`, `{n}`, `{total}`, `{earned}`, `{paws}`, `{s
 ## Images
 
 1. Drop files into `public/assets/foods/`, `public/assets/pets/`, or `public/assets/branding/`.
-2. If you use `.jpg` / `.png` / `.webp`, update the matching `image` path in `foods.json` (or pet paths in the welcome screen).
+2. Match the food `image` path in `foods.json` (currently `.jpg` cartoon placeholders).
+
+Current food filenames under `public/assets/foods/`:
+
+- `plain-cooked-chicken.jpg`
+- `raw-onion.jpg`
+- `plain-cooked-carrot.jpg`
+- `grape-cluster.jpg`
+- `mystery-leftover-bowl.jpg`
+- `plain-cooked-fish.jpg`
+- `chocolate-brownie.jpg`
+- `canned-tuna-unknown.jpg`
+- `plain-tofu.jpg`
+- `raw-salmon.jpg`
+- `candy.jpg`
+- `watermelon.jpg`
+- `corn.jpg`
+- `kiwi.jpg`
+- `avocado.jpg`
 
 Example:
 

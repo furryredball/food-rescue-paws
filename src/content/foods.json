@@ -7,7 +7,7 @@
         "zhHant": "清煮雞肉",
         "en": "Plain cooked chicken"
       },
-      "image": "foods/plain-cooked-chicken.svg",
+      "image": "foods/plain-cooked-chicken.jpg",
       "imageAlt": {
         "zhHant": "乾淨盤子上的清煮雞胸肉塊",
         "en": "Pieces of plain cooked chicken breast on a clean plate"
@@ -48,7 +48,7 @@
         "zhHant": "生洋蔥",
         "en": "Raw onion"
       },
-      "image": "foods/raw-onion.svg",
+      "image": "foods/raw-onion.jpg",
       "imageAlt": {
         "zhHant": "一顆生洋蔥和切好的洋蔥塊",
         "en": "A whole raw onion and chopped onion pieces"
@@ -88,7 +88,7 @@
         "zhHant": "清煮胡蘿蔔",
         "en": "Plain cooked carrot"
       },
-      "image": "foods/plain-cooked-carrot.svg",
+      "image": "foods/plain-cooked-carrot.jpg",
       "imageAlt": {
         "zhHant": "沒有調味的軟熟胡蘿蔔片",
         "en": "Soft cooked carrot slices without seasoning"
@@ -128,7 +128,7 @@
         "zhHant": "葡萄",
         "en": "Grapes"
       },
-      "image": "foods/grape-cluster.svg",
+      "image": "foods/grape-cluster.jpg",
       "imageAlt": {
         "zhHant": "一小串新鮮紫葡萄",
         "en": "A small cluster of fresh purple grapes"
@@ -168,7 +168,7 @@
         "zhHant": "神秘剩菜碗",
         "en": "Mystery leftover bowl"
       },
-      "image": "foods/mystery-leftover-bowl.svg",
+      "image": "foods/mystery-leftover-bowl.jpg",
       "imageAlt": {
         "zhHant": "一碗蓋著的混合剩菜，成分不明",
         "en": "A covered bowl of mixed leftovers with unknown ingredients"
@@ -208,7 +208,7 @@
         "zhHant": "清煮魚肉",
         "en": "Plain cooked fish"
       },
-      "image": "foods/plain-cooked-fish.svg",
+      "image": "foods/plain-cooked-fish.jpg",
       "imageAlt": {
         "zhHant": "去骨後的清煮白魚肉片",
         "en": "Flaked plain cooked white fish without bones"
@@ -248,7 +248,7 @@
         "zhHant": "朱古力布朗尼",
         "en": "Chocolate brownie"
       },
-      "image": "foods/chocolate-brownie.svg",
+      "image": "foods/chocolate-brownie.jpg",
       "imageAlt": {
         "zhHant": "餐巾上的一塊朱古力布朗尼",
         "en": "A square chocolate brownie on a napkin"
@@ -288,7 +288,7 @@
         "zhHant": "打開的吞拿魚罐頭",
         "en": "Open tuna tin"
       },
-      "image": "foods/canned-tuna-unknown.svg",
+      "image": "foods/canned-tuna-unknown.jpg",
       "imageAlt": {
         "zhHant": "打開的吞拿魚罐頭，標籤看不清",
         "en": "An open tin of tuna with an unreadable label"
@@ -400,6 +400,206 @@
         "aspca-toxic",
         "fda-pets",
         "exhibition-note"
+      ],
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "candy",
+      "title": {
+        "zhHant": "糖果",
+        "en": "Candy"
+      },
+      "image": "foods/candy.jpg",
+      "imageAlt": {
+        "zhHant": "幾顆彩色硬糖",
+        "en": "A few colourful hard candies"
+      },
+      "preparation": {
+        "zhHant": "人吃的甜糖果，有糖分，可能含不明添加物。",
+        "en": "Sweet people candy with sugar; additives may be unknown."
+      },
+      "clues": [
+        {
+          "zhHant": "糖果是人吃的甜食，不是寵物食物。",
+          "en": "Candy is a people sweet, not pet food."
+        },
+        {
+          "zhHant": "有些糖可能含對寵物很危險的甜味劑。",
+          "en": "Some sweets may contain sweeteners that are dangerous for pets."
+        },
+        {
+          "zhHant": "即使一小顆也不要自己給寵物。",
+          "en": "Do not offer even a small piece to a pet on your own."
+        }
+      ],
+      "correctAnswer": "neither",
+      "explanation": {
+        "zhHant": "糖果對狗和貓都不適合。請留給人，並告訴大人。",
+        "en": "Candy is not suitable for dogs or cats. Keep it for people and tell a grown-up."
+      },
+      "sourceIds": [
+        "aspca-toxic",
+        "fda-pets"
+      ],
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "watermelon",
+      "title": {
+        "zhHant": "西瓜",
+        "en": "Watermelon"
+      },
+      "image": "foods/watermelon.jpg",
+      "imageAlt": {
+        "zhHant": "一片去籽的新鮮西瓜",
+        "en": "A fresh watermelon slice with no seeds shown"
+      },
+      "preparation": {
+        "zhHant": "新鮮西瓜果肉，已去籽、去皮，沒有糖或鹽。",
+        "en": "Fresh watermelon flesh only — no seeds, no rind, no sugar or salt."
+      },
+      "clues": [
+        {
+          "zhHant": "籽和綠皮不要給寵物。",
+          "en": "Seeds and green rind should not go to pets."
+        },
+        {
+          "zhHant": "純果肉、大人同意時，狗和貓都可能可以分享一點。",
+          "en": "Plain flesh can be okay for dogs and cats when a grown-up says yes."
+        },
+        {
+          "zhHant": "這不是正餐，只是檢查練習。",
+          "en": "This is not a meal — only an inspection practice."
+        }
+      ],
+      "correctAnswer": "both",
+      "explanation": {
+        "zhHant": "去籽去皮的西瓜果肉，大人同意時狗和貓都可能可以分享一點。這不是份量指引。",
+        "en": "Seedless, rind-free watermelon flesh can be okay for dogs and cats when a grown-up agrees. This is not a portion guide."
+      },
+      "sourceIds": [
+        "fda-pets",
+        "exhibition-note"
+      ],
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "corn",
+      "title": {
+        "zhHant": "玉米粒",
+        "en": "Corn kernels"
+      },
+      "image": "foods/corn.jpg",
+      "imageAlt": {
+        "zhHant": "一小碗清煮玉米粒（已離芯）",
+        "en": "A small bowl of plain cooked corn kernels off the cob"
+      },
+      "preparation": {
+        "zhHant": "清煮玉米粒，已從玉米芯取下，沒有牛油、沒有鹽。",
+        "en": "Plain cooked corn kernels taken off the cob, no butter, no salt."
+      },
+      "clues": [
+        {
+          "zhHant": "整條玉米芯可能卡住寵物，很危險。",
+          "en": "A whole corn cob can be dangerous if a pet chews it."
+        },
+        {
+          "zhHant": "狗有時可以吃一點清淡玉米粒。",
+          "en": "Dogs can sometimes share a little plain corn kernels."
+        },
+        {
+          "zhHant": "貓通常更喜歡肉類，玉米不是貓的首選。",
+          "en": "Cats usually prefer meaty foods, so corn is not a useful choice for cats."
+        }
+      ],
+      "correctAnswer": "dog",
+      "explanation": {
+        "zhHant": "離芯、無調味的清煮玉米粒，大人同意時可以當狗的點心想法。玉米芯和調味玉米都不適合。對貓不是有用選擇。",
+        "en": "Plain cooked kernels off the cob can be a snack idea for dogs when a grown-up agrees. Cobs and seasoned corn are not suitable. Not a useful choice for cats."
+      },
+      "sourceIds": [
+        "fda-pets",
+        "exhibition-note"
+      ],
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "kiwi",
+      "title": {
+        "zhHant": "奇異果",
+        "en": "Kiwi"
+      },
+      "image": "foods/kiwi.jpg",
+      "imageAlt": {
+        "zhHant": "去皮的綠色奇異果切半",
+        "en": "Peeled green kiwi fruit cut in half"
+      },
+      "preparation": {
+        "zhHant": "新鮮奇異果，已去皮切塊，沒有糖。",
+        "en": "Fresh kiwi, peeled and cut, no sugar added."
+      },
+      "clues": [
+        {
+          "zhHant": "外皮通常要去掉。",
+          "en": "The fuzzy skin is usually removed."
+        },
+        {
+          "zhHant": "狗有時可以吃一點原味奇異果。",
+          "en": "Dogs can sometimes share a little plain kiwi."
+        },
+        {
+          "zhHant": "貓通常不需要這種水果。",
+          "en": "Cats usually do not need this kind of fruit."
+        }
+      ],
+      "correctAnswer": "dog",
+      "explanation": {
+        "zhHant": "去皮的原味奇異果，大人同意時可以當狗的點心想法。對貓不是有用選擇。這不是份量指引。",
+        "en": "Peeled plain kiwi can be a snack idea for dogs when a grown-up agrees. It is not a useful choice for cats. This is not a portion guide."
+      },
+      "sourceIds": [
+        "fda-pets",
+        "exhibition-note"
+      ],
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "avocado",
+      "title": {
+        "zhHant": "牛油果",
+        "en": "Avocado"
+      },
+      "image": "foods/avocado.jpg",
+      "imageAlt": {
+        "zhHant": "整個牛油果和切開見核的半顆",
+        "en": "A whole avocado and a cut half with the pit"
+      },
+      "preparation": {
+        "zhHant": "新鮮牛油果，連皮和果核一起在盤上。",
+        "en": "Fresh avocado on a plate, including skin and pit nearby."
+      },
+      "clues": [
+        {
+          "zhHant": "牛油果的某些部分可能讓寵物不舒服。",
+          "en": "Parts of avocado can make pets feel unwell."
+        },
+        {
+          "zhHant": "果核很大，也有哽塞風險。",
+          "en": "The large pit is also a choking risk."
+        },
+        {
+          "zhHant": "這不是寵物點心——先問大人。",
+          "en": "This is not a pet treat — ask a grown-up."
+        }
+      ],
+      "correctAnswer": "neither",
+      "explanation": {
+        "zhHant": "牛油果對狗和貓都不是安全的檢查答案。請放著並告訴大人。",
+        "en": "Avocado is not a safe inspection answer for dogs or cats. Set it aside and tell a grown-up."
+      },
+      "sourceIds": [
+        "aspca-toxic",
+        "fda-pets"
       ],
       "reviewStatus": "draft"
     }

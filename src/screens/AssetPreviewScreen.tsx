@@ -1,25 +1,29 @@
 import { foods } from '../data/foods'
+import { BiText } from '../components/BiText'
+import { biAria } from '../i18n/format'
 import { SafeImage } from '../components/SafeImage'
+import { copy } from '../i18n/types'
+import { ui } from '../i18n/ui'
 
 interface AssetPreviewScreenProps {
   onBack: () => void
 }
 
 const BRANDING = [
-  { path: 'branding/logo.svg', label: 'Logo' },
-  { path: 'branding/badge.svg', label: 'Completion badge' },
+  { path: 'branding/logo.svg', label: ui.logo },
+  { path: 'branding/badge.svg', label: ui.completionBadge },
 ]
 
 const PETS = [
-  { path: 'pets/pip-dog.svg', label: 'Pip the dog' },
-  { path: 'pets/miso-cat.svg', label: 'Miso the cat' },
+  { path: 'pets/pip-dog.svg', label: ui.pipDog },
+  { path: 'pets/miso-cat.svg', label: ui.misoCat },
 ]
 
 const AUDIO = [
-  { path: 'audio/correct.mp3', label: 'Correct cue' },
-  { path: 'audio/retry.mp3', label: 'Retry cue' },
-  { path: 'audio/complete.mp3', label: 'Complete cue' },
-  { path: 'audio/tap.mp3', label: 'Tap cue' },
+  { path: 'audio/correct.mp3', label: copy('答對提示音', 'Correct cue') },
+  { path: 'audio/retry.mp3', label: copy('再試提示音', 'Retry cue') },
+  { path: 'audio/complete.mp3', label: copy('完成提示音', 'Complete cue') },
+  { path: 'audio/tap.mp3', label: copy('點擊提示音', 'Tap cue') },
 ]
 
 /** Development helper to review placeholders and swapped assets. */
@@ -30,54 +34,63 @@ export function AssetPreviewScreen({ onBack }: AssetPreviewScreenProps) {
       aria-labelledby="asset-preview-title"
     >
       <header className="screen-header">
-        <h1 id="asset-preview-title">Asset preview</h1>
+        <BiText
+          copy={ui.assetPreviewTitle}
+          as="h1"
+          id="asset-preview-title"
+        />
         <button type="button" className="btn btn--ghost" onClick={onBack}>
-          Back to welcome
+          <BiText copy={ui.backToWelcome} mode="inline" />
         </button>
       </header>
 
-      <p className="lede">
-        Missing files show labelled placeholders instead of broken-image icons.
-        Replace files under <code>public/assets/</code> using the same paths.
-      </p>
+      <BiText copy={ui.assetPreviewLede} as="p" className="lede" />
 
-      <h2>Branding</h2>
+      <BiText copy={ui.branding} as="h2" />
       <div className="asset-grid">
         {BRANDING.map((item) => (
           <figure key={item.path} className="asset-tile">
-            <SafeImage path={item.path} alt={item.label} label={item.label} />
+            <SafeImage
+              path={item.path}
+              alt={biAria(item.label)}
+              label={biAria(item.label)}
+            />
             <figcaption>
-              {item.label}
+              <BiText copy={item.label} />
               <code>{item.path}</code>
             </figcaption>
           </figure>
         ))}
       </div>
 
-      <h2>Pet guides</h2>
+      <BiText copy={ui.petGuides} as="h2" />
       <div className="asset-grid">
         {PETS.map((item) => (
           <figure key={item.path} className="asset-tile">
-            <SafeImage path={item.path} alt={item.label} label={item.label} />
+            <SafeImage
+              path={item.path}
+              alt={biAria(item.label)}
+              label={biAria(item.label)}
+            />
             <figcaption>
-              {item.label}
+              <BiText copy={item.label} />
               <code>{item.path}</code>
             </figcaption>
           </figure>
         ))}
       </div>
 
-      <h2>Food cards</h2>
+      <BiText copy={ui.foodCards} as="h2" />
       <div className="asset-grid">
         {foods.map((food) => (
           <figure key={food.id} className="asset-tile">
             <SafeImage
               path={food.image}
-              alt={food.imageAlt}
-              label={food.title}
+              alt={biAria(food.imageAlt)}
+              label={biAria(food.title)}
             />
             <figcaption>
-              {food.title}
+              <BiText copy={food.title} />
               <code>{food.image}</code>
               <span className="asset-tile__status">{food.reviewStatus}</span>
             </figcaption>
@@ -85,11 +98,11 @@ export function AssetPreviewScreen({ onBack }: AssetPreviewScreenProps) {
         ))}
       </div>
 
-      <h2>Audio paths</h2>
+      <BiText copy={ui.audioPaths} as="h2" />
       <ul className="asset-audio-list">
         {AUDIO.map((item) => (
           <li key={item.path}>
-            <strong>{item.label}</strong>
+            <BiText copy={item.label} as="strong" />
             <code>{item.path}</code>
           </li>
         ))}

@@ -1,4 +1,8 @@
-import { ANSWER_LABELS, ANSWER_VALUES, type AnswerValue } from '../types/food'
+import { BiText } from './BiText'
+import { biAria } from '../i18n/format'
+import { ANSWER_LABELS } from '../i18n/ui'
+import { ANSWER_VALUES, type AnswerValue } from '../types/food'
+import { ui } from '../i18n/ui'
 
 interface AnswerChoicesProps {
   disabled?: boolean
@@ -7,7 +11,11 @@ interface AnswerChoicesProps {
 
 export function AnswerChoices({ disabled = false, onSelect }: AnswerChoicesProps) {
   return (
-    <div className="answer-choices" role="group" aria-label="Who could this food be for?">
+    <div
+      className="answer-choices"
+      role="group"
+      aria-label={biAria(ui.answerGroupAria)}
+    >
       {ANSWER_VALUES.map((value) => (
         <button
           key={value}
@@ -19,7 +27,11 @@ export function AnswerChoices({ disabled = false, onSelect }: AnswerChoicesProps
           <span className="answer-choices__symbol" aria-hidden="true">
             {symbolFor(value)}
           </span>
-          <span className="answer-choices__text">{ANSWER_LABELS[value]}</span>
+          <BiText
+            copy={ANSWER_LABELS[value]}
+            as="span"
+            className="answer-choices__text"
+          />
         </button>
       ))}
     </div>
@@ -29,13 +41,13 @@ export function AnswerChoices({ disabled = false, onSelect }: AnswerChoicesProps
 function symbolFor(value: AnswerValue): string {
   switch (value) {
     case 'dog':
-      return 'D'
+      return '狗'
     case 'cat':
-      return 'C'
+      return '貓'
     case 'both':
-      return 'B'
+      return '雙'
     case 'neither':
-      return 'N'
+      return '否'
     case 'ask-grown-up':
       return '?'
   }

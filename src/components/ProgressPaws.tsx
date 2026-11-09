@@ -1,3 +1,7 @@
+import { ui } from '../i18n/ui'
+import { BiText } from './BiText'
+import { biAria } from '../i18n/format'
+
 interface ProgressPawsProps {
   earned: number
   total: number
@@ -8,9 +12,9 @@ export function ProgressPaws({ earned, total }: ProgressPawsProps) {
     <div
       className="progress-paws"
       role="status"
-      aria-label={`${earned} of ${total} paws earned`}
+      aria-label={biAria(ui.pawsAria(earned, total))}
     >
-      <span className="progress-paws__label">Paws</span>
+      <BiText copy={ui.paws} as="span" className="progress-paws__label" mode="inline" />
       <ul className="progress-paws__list">
         {Array.from({ length: total }, (_, index) => {
           const filled = index < earned

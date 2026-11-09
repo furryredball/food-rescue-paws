@@ -1,4 +1,7 @@
-import { ANSWER_LABELS, type AnswerValue, type FoodCard } from '../types/food'
+import { BiText } from '../components/BiText'
+import { copy, type LocaleCopy } from '../i18n/types'
+import { ANSWER_LABELS, ui } from '../i18n/ui'
+import type { AnswerValue, FoodCard } from '../types/food'
 
 interface FeedbackScreenProps {
   card: FoodCard
@@ -15,16 +18,22 @@ export function FeedbackScreen({
   selectedAnswer,
   onContinue,
 }: FeedbackScreenProps) {
-  let title = 'Nice inspecting!'
-  let body = card.explanation
+  let title = ui.feedbackNice
+  let body: LocaleCopy = card.explanation
+  let result = ui.feedbackCorrect
 
   if (!correct && !revealed) {
-    title = 'Almost — look again'
-    body =
-      'That choice does not match this food’s details. Check the preparation and clues, then try once more.'
+    title = ui.feedbackAlmost
+    body = ui.feedbackRetryBody
+    result = ui.feedbackRetry
   } else if (!correct && revealed) {
-    title = 'Let’s learn together'
-    body = `${card.explanation} The helpful answer is ${ANSWER_LABELS[card.correctAnswer]}.`
+    title = ui.feedbackLearn
+    const helpful = ui.helpfulAnswerIs(ANSWER_LABELS[card.correctAnswer])
+    body = copy(
+      `${card.explanation.zhHant} ${helpful.zhHant}`,
+      `${card.explanation.en} ${helpful.en}`,
+    )
+    result = ui.feedbackShown
   }
 
   return (
@@ -39,22 +48,28 @@ export function FeedbackScreen({
         }
         role="status"
       >
-        <p className="feedback-banner__result">
-          {correct ? 'Correct' : revealed ? 'Answer shown' : 'Try again'}
-        </p>
-        <h1 id="feedback-title">{title}</h1>
-        <p>{body}</p>
-        <p className="feedback-banner__choice">
-          You chose: {ANSWER_LABELS[selectedAnswer]}
-        </p>
+        <BiText
+          copy={result}
+          as="p"
+          className="feedback-banner__result"
+          mode="inline"
+        />
+        <BiText copy={title} as="h1" id="feedback-title" />
+        <BiText copy={body} as="p" />
+        <BiText
+          copy={ui.youChose(ANSWER_LABELS[selectedAnswer])}
+          as="p"
+          className="feedback-banner__choice"
+        />
       </div>
 
-      <p className="reminder">
-        Always ask a grown-up before offering food to a real pet.
-      </p>
+      <BiText copy={ui.reminderAskGrownUp} as="p" className="reminder" />
 
       <button type="button" className="btn btn--primary" onClick={onContinue}>
-        {correct || revealed ? 'Next' : 'Try again'}
+        <BiText
+          copy={correct || revealed ? ui.next : ui.tryAgain}
+          mode="inline"
+        />
       </button>
     </section>
   )

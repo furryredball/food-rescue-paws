@@ -1,5 +1,8 @@
 import { AdultInfoPanel } from '../components/AdultInfoPanel'
+import { BiText } from '../components/BiText'
+import { biAria } from '../i18n/format'
 import { SafeImage } from '../components/SafeImage'
+import { ui } from '../i18n/ui'
 
 interface WelcomeScreenProps {
   onStart: () => void
@@ -16,50 +19,65 @@ export function WelcomeScreen({
         <SafeImage
           path="branding/logo.svg"
           alt=""
-          label="Food Rescue Paws"
+          label={biAria(ui.brandName)}
           className="brand-lockup__mark"
         />
-        <p className="brand-lockup__name" id="welcome-title">
-          Food Rescue Paws
-        </p>
+        <BiText
+          copy={ui.brandName}
+          as="p"
+          className="brand-lockup__name"
+          id="welcome-title"
+        />
       </div>
 
-      <p className="lede">
-        Help Pip the dog and Miso the cat inspect rescued food — then always ask
-        a grown-up before feeding a real pet.
-      </p>
+      <BiText copy={ui.welcomeLede} as="p" className="lede" />
 
       <div className="hero-stage">
         <div className="hero-stage__stickers" aria-hidden="true">
-          <span className="sticker sticker--coral">Ask a grown-up</span>
-          <span className="sticker sticker--black">6 foods</span>
-          <span className="sticker sticker--sky">2–3 min</span>
+          <BiText
+            copy={ui.stickerAskGrownUp}
+            as="span"
+            className="sticker sticker--coral"
+            mode="inline"
+          />
+          <BiText
+            copy={ui.stickerSixFoods}
+            as="span"
+            className="sticker sticker--black"
+            mode="inline"
+          />
+          <BiText
+            copy={ui.stickerSessionTime}
+            as="span"
+            className="sticker sticker--sky"
+            mode="inline"
+          />
         </div>
 
         <div className="guide-row">
           <figure className="guide-card">
             <SafeImage
               path="pets/pip-dog.svg"
-              alt="Pip the friendly dog guide"
-              label="Pip the dog"
+              alt={biAria(ui.pipDog)}
+              label={biAria(ui.pipDog)}
               className="guide-card__art"
             />
-            <figcaption>Pip the dog</figcaption>
+            <BiText copy={ui.pipDog} as="figcaption" mode="stack" />
           </figure>
           <figure className="guide-card">
             <SafeImage
               path="pets/miso-cat.svg"
-              alt="Miso the curious cat guide"
-              label="Miso the cat"
+              alt={biAria(ui.misoCat)}
+              label={biAria(ui.misoCat)}
               className="guide-card__art"
             />
-            <figcaption>Miso the cat</figcaption>
+            <BiText copy={ui.misoCat} as="figcaption" mode="stack" />
           </figure>
         </div>
       </div>
 
       <button type="button" className="btn btn--primary btn--xl" onClick={onStart}>
-        Start inspecting →
+        <BiText copy={ui.startInspecting} mode="stack" />
       </button>
 
       <AdultInfoPanel onOpenAssetPreview={onOpenAssetPreview} />

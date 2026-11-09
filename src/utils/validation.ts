@@ -1,3 +1,4 @@
+import { isLocaleCopy } from '../i18n/types'
 import { ANSWER_VALUES, type AnswerValue, type FoodCard } from '../types/food'
 
 export interface ValidationResult {
@@ -12,7 +13,7 @@ export function isValidAnswer(value: unknown): value is AnswerValue {
   )
 }
 
-/** Validate unique IDs and allowed answer values across the card deck. */
+/** Validate unique IDs, bilingual fields, and allowed answer values. */
 export function validateFoodCards(cards: FoodCard[]): ValidationResult {
   const errors: string[] = []
   const seen = new Set<string>()
@@ -34,8 +35,20 @@ export function validateFoodCards(cards: FoodCard[]): ValidationResult {
       )
     }
 
-    if (!card.title.trim()) {
-      errors.push(`Card "${card.id}" is missing a title.`)
+    if (!isLocaleCopy(card.title)) {
+      errors.push(`Card "${card.id}" needs bilingual title (zhHant + en).`)
+    }
+    if (!isLocaleCopy(card.preparation)) {
+      errors.push(`Card "${card.id}" needs bilingual preparation.`)
+    }
+    if (!isLocaleCopy(card.explanation)) {
+      errors.push(`Card "${card.id}" needs bilingual explanation.`)
+    }
+    if (!isLocaleCopy(card.imageAlt)) {
+      errors.push(`Card "${card.id}" needs bilingual imageAlt.`)
+    }
+    if (!Array.isArray(card.clues) || card.clues.some((clue) => !isLocaleCopy(clue))) {
+      errors.push(`Card "${card.id}" clues must be bilingual.`)
     }
   }
 

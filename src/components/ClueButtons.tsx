@@ -1,5 +1,10 @@
+import type { LocaleCopy } from '../i18n/types'
+import { ui } from '../i18n/ui'
+import { BiText } from './BiText'
+import { biAria } from '../i18n/format'
+
 interface ClueButtonsProps {
-  clues: string[]
+  clues: LocaleCopy[]
   openIndexes: number[]
   onToggle: (index: number) => void
 }
@@ -9,8 +14,12 @@ export function ClueButtons({ clues, openIndexes, onToggle }: ClueButtonsProps) 
 
   return (
     <div className="clue-buttons">
-      <p className="clue-buttons__heading">Need a clue?</p>
-      <div className="clue-buttons__row" role="group" aria-label="Optional clues">
+      <BiText copy={ui.needClue} as="p" className="clue-buttons__heading" />
+      <div
+        className="clue-buttons__row"
+        role="group"
+        aria-label={biAria(ui.cluesGroupAria)}
+      >
         {clues.map((clue, index) => {
           const open = openIndexes.includes(index)
           return (
@@ -26,12 +35,15 @@ export function ClueButtons({ clues, openIndexes, onToggle }: ClueButtonsProps) 
                 aria-controls={`clue-panel-${index}`}
                 onClick={() => onToggle(index)}
               >
-                Clue {index + 1}
+                <BiText copy={ui.clueN(index + 1)} mode="inline" />
               </button>
               {open ? (
-                <p id={`clue-panel-${index}`} className="clue-buttons__text">
-                  {clue}
-                </p>
+                <BiText
+                  copy={clue}
+                  as="p"
+                  id={`clue-panel-${index}`}
+                  className="clue-buttons__text"
+                />
               ) : null}
             </div>
           )

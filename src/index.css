@@ -23,8 +23,8 @@
   --radius-sm: 0.75rem;
   --touch: 3rem; /* 48px */
 
-  --font-display: 'Archivo Black', 'Nunito', sans-serif;
-  --font-body: 'Nunito', 'Segoe UI', sans-serif;
+  --font-display: 'Archivo Black', 'Noto Sans TC', 'Nunito', sans-serif;
+  --font-body: 'Noto Sans TC', 'Nunito', 'Segoe UI', sans-serif;
 
   font-family: var(--font-body);
   line-height: 1.4;

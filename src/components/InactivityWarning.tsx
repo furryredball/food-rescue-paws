@@ -1,3 +1,6 @@
+import { ui } from '../i18n/ui'
+import { BiText } from './BiText'
+
 interface InactivityWarningProps {
   secondsLeft: number
   onContinue: () => void
@@ -16,18 +19,19 @@ export function InactivityWarning({
       aria-describedby="inactivity-desc"
     >
       <div className="inactivity-warning__panel">
-        <h2 id="inactivity-title">Still playing?</h2>
-        <p id="inactivity-desc">
-          This game will restart in {secondsLeft} second
-          {secondsLeft === 1 ? '' : 's'} so the next visitor can play.
-        </p>
+        <BiText copy={ui.stillPlaying} as="h2" id="inactivity-title" />
+        <BiText
+          copy={ui.inactivityDesc(secondsLeft)}
+          as="p"
+          id="inactivity-desc"
+        />
         <button
           type="button"
           className="btn btn--primary"
           onClick={onContinue}
           autoFocus
         >
-          Continue
+          <BiText copy={ui.continue} mode="inline" />
         </button>
       </div>
     </div>

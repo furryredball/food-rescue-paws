@@ -1,3 +1,6 @@
+import type { LocaleCopy } from '../i18n/types'
+import { ANSWER_LABELS as UI_ANSWER_LABELS } from '../i18n/ui'
+
 export const ANSWER_VALUES = [
   'dog',
   'cat',
@@ -12,22 +15,22 @@ export type ReviewStatus = 'draft' | 'reviewed'
 
 export interface FoodCard {
   id: string
-  title: string
+  title: LocaleCopy
   image: string
-  imageAlt: string
-  preparation: string
-  clues: string[]
+  imageAlt: LocaleCopy
+  preparation: LocaleCopy
+  clues: LocaleCopy[]
   correctAnswer: AnswerValue
-  explanation: string
+  explanation: LocaleCopy
   sourceIds: string[]
   reviewStatus: ReviewStatus
 }
 
 export interface Source {
   id: string
-  label: string
+  label: LocaleCopy
   url: string
-  note?: string
+  note?: LocaleCopy
 }
 
 export type ScreenId =
@@ -38,10 +41,4 @@ export type ScreenId =
   | 'completion'
   | 'asset-preview'
 
-export const ANSWER_LABELS: Record<AnswerValue, string> = {
-  dog: 'Dog',
-  cat: 'Cat',
-  both: 'Both',
-  neither: 'Neither',
-  'ask-grown-up': 'Ask a grown-up',
-}
+export const ANSWER_LABELS = UI_ANSWER_LABELS

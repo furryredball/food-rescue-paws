@@ -18,6 +18,8 @@ import { InspectionScreen } from './screens/InspectionScreen'
 import { FeedbackScreen } from './screens/FeedbackScreen'
 import { CompletionScreen } from './screens/CompletionScreen'
 import { AssetPreviewScreen } from './screens/AssetPreviewScreen'
+import { BiText } from './components/BiText'
+import { ui } from './i18n/ui'
 import { validateFoodCards } from './utils/validation'
 import './App.css'
 
@@ -64,7 +66,7 @@ export default function App() {
     return (
       <main className="app-shell">
         <section className="screen">
-          <h1>Data validation failed</h1>
+          <BiText copy={ui.validationFailed} as="h1" />
           <ul>
             {validation.errors.map((error) => (
               <li key={error}>{error}</li>

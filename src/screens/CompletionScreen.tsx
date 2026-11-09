@@ -1,5 +1,8 @@
+import { BiText } from '../components/BiText'
+import { biAria } from '../i18n/format'
 import { ProgressPaws } from '../components/ProgressPaws'
 import { SafeImage } from '../components/SafeImage'
+import { ui } from '../i18n/ui'
 
 interface CompletionScreenProps {
   pawsEarned: number
@@ -17,25 +20,31 @@ export function CompletionScreen({
       className="screen screen--completion"
       aria-labelledby="completion-title"
     >
-      <span className="sticker sticker--coral">You did it</span>
+      <BiText
+        copy={ui.youDidIt}
+        as="span"
+        className="sticker sticker--coral"
+        mode="inline"
+      />
       <SafeImage
         path="branding/badge.svg"
         alt=""
-        label="Food Rescue badge"
+        label={biAria(ui.badgeLabel)}
         className="completion-badge"
       />
-      <h1 id="completion-title">Food Rescue badge earned!</h1>
-      <p className="lede">
-        You inspected {totalCards} foods and collected {pawsEarned} progress
-        paws. Remember: ask a grown-up before feeding a real pet.
-      </p>
+      <BiText copy={ui.badgeEarned} as="h1" id="completion-title" />
+      <BiText
+        copy={ui.completionLede(totalCards, pawsEarned)}
+        as="p"
+        className="lede"
+      />
       <ProgressPaws earned={pawsEarned} total={totalCards} />
       <button
         type="button"
         className="btn btn--primary btn--xl"
         onClick={onPlayAgain}
       >
-        Play again →
+        <BiText copy={ui.playAgain} mode="stack" />
       </button>
     </section>
   )

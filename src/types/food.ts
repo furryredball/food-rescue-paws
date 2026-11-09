@@ -11,7 +11,7 @@ export const ANSWER_VALUES = [
 
 export type AnswerValue = (typeof ANSWER_VALUES)[number]
 
-export type ReviewStatus = 'draft' | 'reviewed'
+export type ReviewStatus = 'draft' | 'reviewed' | 'qa-checked'
 
 export interface FoodCard {
   id: string

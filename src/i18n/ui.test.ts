@@ -10,7 +10,7 @@ describe('bilingual copy', () => {
     expect(ui.brandName.zhHant).toContain('食物')
     expect(ui.brandName.en).toContain('Food Rescue')
     expect(ANSWER_LABELS['ask-grown-up'].zhHant).toBe('先問大人')
-    expect(ANSWER_LABELS.dog.en).toBe('Dog')
+    expect(ANSWER_LABELS.dog.en).toBe('Dog snack')
   })
 
   it('requires bilingual fields on every food card', () => {

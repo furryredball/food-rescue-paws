@@ -92,6 +92,12 @@ export function InspectionScreen({
           <AnswerChoices onSelect={onAnswer} />
 
           <BiText
+            copy={ui.dogSnackLegend}
+            as="p"
+            className="answer-legend"
+          />
+
+          <BiText
             copy={ui.reminderCompact}
             as="p"
             className="reminder reminder--compact"

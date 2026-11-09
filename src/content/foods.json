@@ -40,7 +40,7 @@
         "fda-pets",
         "exhibition-note"
       ],
-      "reviewStatus": "draft"
+      "reviewStatus": "qa-checked"
     },
     {
       "id": "raw-onion",
@@ -80,7 +80,7 @@
         "aspca-toxic",
         "fda-pets"
       ],
-      "reviewStatus": "draft"
+      "reviewStatus": "qa-checked"
     },
     {
       "id": "plain-cooked-carrot",
@@ -113,14 +113,14 @@
       ],
       "correctAnswer": "dog",
       "explanation": {
-        "zhHant": "大人同意時，清煮胡蘿蔔可以當狗的脆脆或軟軟點心想法。對貓來說不是有用的食物選擇。",
-        "en": "Plain cooked carrot can be a crunchy or soft snack idea for dogs when a grown-up agrees. It is not a useful food choice for cats."
+        "zhHant": "大人同意時，清煮胡蘿蔔可以當狗的點心。貓不需要胡蘿蔔，所以這張卡把它算作狗點心——胡蘿蔔本身不是毒藥。這不是份量指引。",
+        "en": "Plain cooked carrot can be a snack idea for dogs when a grown-up agrees. Cats do not need carrot, so this card calls it a dog snack — carrot itself is not a poison. This is not a portion guide."
       },
       "sourceIds": [
         "fda-pets",
         "exhibition-note"
       ],
-      "reviewStatus": "draft"
+      "reviewStatus": "qa-checked"
     },
     {
       "id": "grape-cluster",
@@ -143,8 +143,8 @@
           "en": "Grapes and raisins can be dangerous for dogs."
         },
         {
-          "zhHant": "貓也不應該吃葡萄。",
-          "en": "Cats should not eat grapes either."
+          "zhHant": "貓食了葡萄也可能腸胃不舒服。",
+          "en": "Cats can also get a sore stomach from grapes."
         },
         {
           "zhHant": "如果在寵物碗附近看到葡萄，立刻問大人。",
@@ -153,14 +153,14 @@
       ],
       "correctAnswer": "neither",
       "explanation": {
-        "zhHant": "葡萄對狗和貓都不安全。請離寵物遠一點，並請大人幫忙。",
-        "en": "Grapes are not safe for dogs or cats. Keep them away from pets and ask a grown-up for help."
+        "zhHant": "葡萄和提子乾可以令狗腎臟衰竭，而且沒有一個安全份量可以估。貓吃了也可能腸胃不舒服——所以所有寵物都要遠離葡萄，並且要告訴大人。",
+        "en": "Grapes and raisins can cause kidney failure in dogs, and there is no safe amount to guess. Cats can also get a sore stomach from them — so keep grapes away from every pet and tell a grown-up."
       },
       "sourceIds": [
         "aspca-toxic",
         "fda-pets"
       ],
-      "reviewStatus": "draft"
+      "reviewStatus": "qa-checked"
     },
     {
       "id": "mystery-leftover-bowl",
@@ -193,14 +193,14 @@
       ],
       "correctAnswer": "ask-grown-up",
       "explanation": {
-        "zhHant": "重要細節缺失，所以安全答案是「先問大人」。精選消費前剩餘食物和盤中剩菜或腐壞食物不同——不要猜。",
-        "en": "Important details are missing, so the safe answer is Ask a grown-up. Selected pre-consumer surplus is different from plate scraps or spoiled food — never guess."
+        "zhHant": "重要細節缺失，所以安全的答案是先問大人。不要猜。",
+        "en": "Important details are missing, so the safe answer is ask a grown-up. Never guess."
       },
       "sourceIds": [
         "exhibition-note",
         "fda-pets"
       ],
-      "reviewStatus": "draft"
+      "reviewStatus": "qa-checked"
     },
     {
       "id": "plain-cooked-fish",
@@ -240,7 +240,7 @@
         "fda-pets",
         "exhibition-note"
       ],
-      "reviewStatus": "draft"
+      "reviewStatus": "qa-checked"
     },
     {
       "id": "chocolate-brownie",
@@ -280,7 +280,7 @@
         "aspca-toxic",
         "fda-pets"
       ],
-      "reviewStatus": "draft"
+      "reviewStatus": "qa-checked"
     },
     {
       "id": "canned-tuna-unknown",
@@ -320,7 +320,7 @@
         "exhibition-note",
         "fda-pets"
       ],
-      "reviewStatus": "draft"
+      "reviewStatus": "qa-checked"
     },
     {
       "id": "plain-tofu",
@@ -353,14 +353,14 @@
       ],
       "correctAnswer": "dog",
       "explanation": {
-        "zhHant": "原味、無調味的豆腐，大人同意時可以當狗的點心想法。對貓來說不是有用的選擇。這不是份量指引。",
-        "en": "Plain, unseasoned tofu can be a snack idea for dogs when a grown-up agrees. It is not a useful food choice for cats. This is not a portion guide."
+        "zhHant": "原味、沒有調味的豆腐，大人同意時可以當狗的點心。貓不需要豆腐，所以這張卡把它算作狗點心——豆腐本身不是毒藥。這不是份量指引。",
+        "en": "Plain, unseasoned tofu can be a snack idea for dogs when a grown-up agrees. Cats do not need tofu, so this card calls it a dog snack — tofu itself is not a poison. This is not a portion guide."
       },
       "sourceIds": [
         "fda-pets",
         "exhibition-note"
       ],
-      "reviewStatus": "draft"
+      "reviewStatus": "qa-checked"
     },
     {
       "id": "raw-salmon",
@@ -379,8 +379,8 @@
       },
       "clues": [
         {
-          "zhHant": "生魚可能有寄生蟲或細菌風險。",
-          "en": "Raw fish can carry parasite or bacteria risks."
+          "zhHant": "生魚可能有寄生蟲、細菌，還有會破壞維他命B1的物質。",
+          "en": "Raw fish can carry parasites, bacteria, and something that destroys vitamin B1."
         },
         {
           "zhHant": "清煮熟透的魚，和生魚不一樣。",
@@ -393,15 +393,15 @@
       ],
       "correctAnswer": "neither",
       "explanation": {
-        "zhHant": "生三文魚對狗和貓都不適合當檢查遊戲裡的安全選擇。請放著並告訴大人——真正餵食前一定要問大人。",
-        "en": "Raw salmon is not a safe choice for dogs or cats in this inspection game. Set it aside and tell a grown-up — always ask before feeding a real pet."
+        "zhHant": "生魚對狗和貓都不是安全的選擇。生魚可能有寄生蟲和細菌，而且含有一種物質會破壞維他命B1——貓最容易受影響。請放在一邊並告訴大人。",
+        "en": "Raw fish is not a safe choice for dogs or cats. It can carry parasites and bacteria, and something in it destroys vitamin B1 — cats are the ones most easily harmed. Set it aside and tell a grown-up."
       },
       "sourceIds": [
         "aspca-toxic",
         "fda-pets",
         "exhibition-note"
       ],
-      "reviewStatus": "draft"
+      "reviewStatus": "qa-checked"
     },
     {
       "id": "candy",
@@ -424,8 +424,8 @@
           "en": "Candy is a people sweet, not pet food."
         },
         {
-          "zhHant": "有些糖可能含對寵物很危險的甜味劑。",
-          "en": "Some sweets may contain sweeteners that are dangerous for pets."
+          "zhHant": "無糖香口膠和無糖糖果可能含木糖醇，對狗非常危險。",
+          "en": "Sugar-free gum and sugar-free candy can contain xylitol, which is very dangerous for dogs."
         },
         {
           "zhHant": "即使一小顆也不要自己給寵物。",
@@ -434,14 +434,14 @@
       ],
       "correctAnswer": "neither",
       "explanation": {
-        "zhHant": "糖果對狗和貓都不適合。請留給人，並告訴大人。",
-        "en": "Candy is not suitable for dogs or cats. Keep it for people and tell a grown-up."
+        "zhHant": "糖果不是寵物食物。無糖香口膠和無糖糖果可能含木糖醇，對狗非常危險——如果寵物吃了，要立刻告訴大人。",
+        "en": "Candy is not pet food. Sugar-free gum and candy can contain xylitol, which is very dangerous for dogs — if a pet eats any, tell a grown-up straight away."
       },
       "sourceIds": [
         "aspca-toxic",
         "fda-pets"
       ],
-      "reviewStatus": "draft"
+      "reviewStatus": "qa-checked"
     },
     {
       "id": "watermelon",
@@ -474,14 +474,14 @@
       ],
       "correctAnswer": "both",
       "explanation": {
-        "zhHant": "去籽去皮的西瓜果肉，大人同意時狗和貓都可能可以分享一點。這不是份量指引。",
-        "en": "Seedless, rind-free watermelon flesh can be okay for dogs and cats when a grown-up agrees. This is not a portion guide."
+        "zhHant": "去籽去皮的西瓜果肉，大人同意時狗和貓都可以試少少——但貓不需要水果，一小口就夠，不是一碗。這不是份量指引。",
+        "en": "Seedless, rind-free watermelon flesh is safe for dogs and cats to taste when a grown-up agrees — but cats do not need fruit, so one small taste is the limit, not a bowl. This is not a portion guide."
       },
       "sourceIds": [
         "fda-pets",
         "exhibition-note"
       ],
-      "reviewStatus": "draft"
+      "reviewStatus": "qa-checked"
     },
     {
       "id": "corn",
@@ -514,14 +514,14 @@
       ],
       "correctAnswer": "dog",
       "explanation": {
-        "zhHant": "離芯、無調味的清煮玉米粒，大人同意時可以當狗的點心想法。玉米芯和調味玉米都不適合。對貓不是有用選擇。",
-        "en": "Plain cooked kernels off the cob can be a snack idea for dogs when a grown-up agrees. Cobs and seasoned corn are not suitable. Not a useful choice for cats."
+        "zhHant": "離芯、沒有調味的清煮玉米粒，大人同意時可以當狗的點心。玉米芯本身對狗和貓都危險——會塞住腸道。貓不需要玉米，所以這張卡把它算作狗點心；玉米本身不是毒藥。",
+        "en": "Plain cooked kernels off the cob can be a snack idea for dogs when a grown-up agrees. The cob itself is dangerous for dogs and cats — it can block the gut. Cats do not need corn, so this card calls it a dog snack; corn is not a poison."
       },
       "sourceIds": [
         "fda-pets",
         "exhibition-note"
       ],
-      "reviewStatus": "draft"
+      "reviewStatus": "qa-checked"
     },
     {
       "id": "kiwi",
@@ -554,14 +554,14 @@
       ],
       "correctAnswer": "dog",
       "explanation": {
-        "zhHant": "去皮的原味奇異果，大人同意時可以當狗的點心想法。對貓不是有用選擇。這不是份量指引。",
-        "en": "Peeled plain kiwi can be a snack idea for dogs when a grown-up agrees. It is not a useful choice for cats. This is not a portion guide."
+        "zhHant": "去皮原味奇異果，大人同意時可以當狗的點心。貓不需要水果，所以這張卡把它算作狗點心——奇異果本身不是毒藥。這不是份量指引。",
+        "en": "Peeled plain kiwi can be a snack idea for dogs when a grown-up agrees. Cats do not need fruit, so this card calls it a dog snack — kiwi is not a poison. This is not a portion guide."
       },
       "sourceIds": [
         "fda-pets",
         "exhibition-note"
       ],
-      "reviewStatus": "draft"
+      "reviewStatus": "qa-checked"
     },
     {
       "id": "avocado",
@@ -580,12 +580,12 @@
       },
       "clues": [
         {
-          "zhHant": "牛油果的某些部分可能讓寵物不舒服。",
-          "en": "Parts of avocado can make pets feel unwell."
+          "zhHant": "對狗和貓來說，牛油果只是輕微腸胃不適。",
+          "en": "For dogs and cats, avocado is only mildly upsetting."
         },
         {
-          "zhHant": "果核很大，也有哽塞風險。",
-          "en": "The large pit is also a choking risk."
+          "zhHant": "危險的是果核和果皮——可以塞住腸道。",
+          "en": "The danger is the pit and skin — they can block the gut."
         },
         {
           "zhHant": "這不是寵物點心——先問大人。",
@@ -594,14 +594,14 @@
       ],
       "correctAnswer": "neither",
       "explanation": {
-        "zhHant": "牛油果對狗和貓都不是安全的檢查答案。請放著並告訴大人。",
-        "en": "Avocado is not a safe inspection answer for dogs or cats. Set it aside and tell a grown-up."
+        "zhHant": "牛油果不是寵物點心。對狗和貓來說只會輕微腸胃不舒服，但果核和果皮可以塞住腸道——所以寵物要遠離牛油果，並且要告訴大人。",
+        "en": "Avocado is not a pet treat. For dogs and cats it is only mildly upsetting, but the pit and skin can block the gut — so keep it away from pets and tell a grown-up."
       },
       "sourceIds": [
         "aspca-toxic",
         "fda-pets"
       ],
-      "reviewStatus": "draft"
+      "reviewStatus": "qa-checked"
     }
   ]
 }

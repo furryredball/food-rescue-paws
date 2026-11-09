@@ -54,6 +54,7 @@ export const ui = {
   pawsAria: (earned: number, total: number) =>
     fill(line('pawsAria'), { earned, total }),
   answerGroupAria: line('answerGroupAria'),
+  dogSnackLegend: line('dogSnackLegend'),
   cluesGroupAria: line('cluesGroupAria'),
   feedbackCorrect: line('feedbackCorrect'),
   feedbackShown: line('feedbackShown'),
@@ -89,6 +90,7 @@ export const ui = {
   safety2: line('safety2'),
   safety3: line('safety3'),
   safety4: line('safety4'),
+  safety5: line('safety5'),
   sourcesHeading: line('sourcesHeading'),
   sourcesHint: line('sourcesHint'),
   openAssetPreview: line('openAssetPreview'),

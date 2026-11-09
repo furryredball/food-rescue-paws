@@ -1,5 +1,4 @@
 import { useId, useState } from 'react'
-import { sources } from '../data/sources'
 import { settings } from '../config/settings'
 import { ui } from '../i18n/ui'
 import { BiText } from './BiText'
@@ -40,21 +39,10 @@ export function AdultInfoPanel({ onOpenAssetPreview }: AdultInfoPanelProps) {
             <li>
               <BiText copy={ui.safety4} as="span" />
             </li>
+            <li>
+              <BiText copy={ui.safety5} as="span" />
+            </li>
           </ul>
-
-          <BiText copy={ui.sourcesHeading} as="h3" />
-          <ul className="adult-info__sources">
-            {sources.map((source) => (
-              <li key={source.id}>
-                <BiText copy={source.label} as="strong" />
-                {source.note ? <BiText copy={source.note} as="p" /> : null}
-                {source.url ? (
-                  <p className="adult-info__url">{source.url}</p>
-                ) : null}
-              </li>
-            ))}
-          </ul>
-          <BiText copy={ui.sourcesHint} as="p" className="adult-info__hint" />
 
           {settings.allowAssetPreview && onOpenAssetPreview ? (
             <button

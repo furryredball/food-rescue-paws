@@ -49,8 +49,8 @@
     "en": "Tap optional clues if you want a hint."
   },
   "instruction3": {
-    "zhHant": "選擇可能適合誰：狗、貓、兩者都可以、兩者都不行，或先問大人。",
-    "en": "Choose who it might be for: Dog, Cat, Both, Neither, or Ask a grown-up."
+    "zhHant": "選擇可能適合誰：狗點心、貓點心、兩者都可以、兩者都不行，或先問大人。",
+    "en": "Choose who it might suit: Dog snack, Cat snack, Both, Neither, or Ask a grown-up."
   },
   "instruction4": {
     "zhHant": "完成 {count} 種食物各得一隻爪印。第一次答錯還可以再試一次。",
@@ -189,8 +189,8 @@
     "en": "Continue"
   },
   "adultToggle": {
-    "zhHant": "給大人：安全與資料來源",
-    "en": "Grown-ups: safety & sources"
+    "zhHant": "給大人：安全說明",
+    "en": "Grown-ups: safety notes"
   },
   "safetyNotes": {
     "zhHant": "安全說明",
@@ -209,8 +209,8 @@
     "en": "Selected pre-consumer surplus (unused, still-safe food) is different from plate scraps or spoiled food."
   },
   "safety4": {
-    "zhHant": "初期卡片標示為草稿，有待合格審核。請勿從本遊戲推導餵食份量或均衡餐食食譜。",
-    "en": "Initial cards are marked draft pending qualified review. Do not invent feeding quantities or balanced-meal recipes from this game."
+    "zhHant": "所有卡片的內容都已核對公開的寵物安全指引（ASPCA、FDA），並不是獸醫審核。",
+    "en": "All cards were checked against published pet-safety guidance (ASPCA, FDA). This is not veterinary review."
   },
   "sourcesHeading": {
     "zhHant": "資料來源",
@@ -266,12 +266,12 @@
   },
   "answers": {
     "dog": {
-      "zhHant": "狗",
-      "en": "Dog"
+      "zhHant": "狗點心",
+      "en": "Dog snack"
     },
     "cat": {
-      "zhHant": "貓",
-      "en": "Cat"
+      "zhHant": "貓點心",
+      "en": "Cat snack"
     },
     "both": {
       "zhHant": "兩者都可以",
@@ -285,5 +285,13 @@
       "zhHant": "先問大人",
       "en": "Ask a grown-up"
     }
+  },
+  "safety5": {
+    "zhHant": "小食只可以佔寵物每日熱量的百分之十以下——小食是小食，不是正餐。",
+    "en": "Treats should be under 10% of a pet's daily calories — treats are treats, not meals."
+  },
+  "dogSnackLegend": {
+    "zhHant": "「狗點心」代表這食物適合做狗的小食，不代表貓吃了會中毒。",
+    "en": "“Dog snack” means the food suits a dog as a treat. It does not mean it is poison for a cat."
   }
 }

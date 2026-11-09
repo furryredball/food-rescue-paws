@@ -193,6 +193,13 @@ h2 {
   font-size: 1rem;
 }
 
+.answer-legend {
+  margin: 0.5rem 0 0;
+  font-size: 0.95rem;
+  color: var(--ink-soft);
+  line-height: 1.4;
+}
+
 .btn-row {
   display: flex;
   flex-wrap: wrap;

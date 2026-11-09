@@ -42,9 +42,11 @@ describe('session length', () => {
     expect(new Set(ids).size).toBe(settings.sessionCardCount)
   })
 
-  it('starts with a draft deck larger than one session', () => {
+  it('ships a QA-checked deck larger than one session', () => {
     expect(foods.length).toBeGreaterThanOrEqual(settings.sessionCardCount)
-    expect(foods.every((card) => card.reviewStatus === 'draft')).toBe(true)
+    expect(foods.every((card) => card.reviewStatus === 'qa-checked')).toBe(
+      true,
+    )
   })
 })
 

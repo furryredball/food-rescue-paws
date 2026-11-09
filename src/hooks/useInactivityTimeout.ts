@@ -1,5 +1,12 @@
 import { useCallback, useEffect, useRef, useState } from 'react'
 import { settings } from '../config/settings'
+import {
+  createInactivityState,
+  reduceInactivity,
+  type InactivityEffect,
+  type InactivityEvent,
+  type InactivityState,
+} from '../game/inactivityMachine'
 
 interface Options {
   timeoutSeconds?: number
@@ -9,8 +16,8 @@ interface Options {
 }
 
 /**
- * Exhibition inactivity guard:
- * idle for timeoutSeconds → show warning for warningSeconds → reset.
+ * Exhibition inactivity guard driven by `inactivityMachine`.
+ * Phase rules stay in the pure reducer; this hook only owns timers/DOM.
  */
 export function useInactivityTimeout({
   timeoutSeconds = settings.inactivityTimeoutSeconds,
@@ -18,20 +25,18 @@ export function useInactivityTimeout({
   enabled = true,
   onReset,
 }: Options) {
-  const [warningVisible, setWarningVisible] = useState(false)
-  const [secondsLeft, setSecondsLeft] = useState(warningSeconds)
+  const [state, setState] = useState<InactivityState>(() =>
+    createInactivityState(warningSeconds, enabled),
+  )
+
+  const stateRef = useRef(state)
   const idleTimer = useRef<number | null>(null)
   const warningTimer = useRef<number | null>(null)
   const countdownTimer = useRef<number | null>(null)
-  const warningVisibleRef = useRef(false)
-  const enabledRef = useRef(enabled)
   const onResetRef = useRef(onReset)
   const timeoutSecondsRef = useRef(timeoutSeconds)
   const warningSecondsRef = useRef(warningSeconds)
-
-  useEffect(() => {
-    enabledRef.current = enabled
-  }, [enabled])
+  const applyEventRef = useRef<(event: InactivityEvent) => void>(() => {})
 
   useEffect(() => {
     onResetRef.current = onReset
@@ -45,6 +50,10 @@ export function useInactivityTimeout({
     warningSecondsRef.current = warningSeconds
   }, [warningSeconds])
 
+  useEffect(() => {
+    stateRef.current = state
+  }, [state])
+
   const clearTimers = useCallback(() => {
     if (idleTimer.current !== null) window.clearTimeout(idleTimer.current)
     if (warningTimer.current !== null) window.clearTimeout(warningTimer.current)
@@ -56,53 +65,61 @@ export function useInactivityTimeout({
     countdownTimer.current = null
   }, [])
 
-  const dismissWarning = useCallback(() => {
-    warningVisibleRef.current = false
-    setWarningVisible(false)
-    setSecondsLeft(warningSecondsRef.current)
-  }, [])
+  const runEffects = useCallback(
+    (effects: InactivityEffect[]) => {
+      for (const effect of effects) {
+        switch (effect.type) {
+          case 'clear_timers':
+            clearTimers()
+            break
+          case 'arm_idle':
+            clearTimers()
+            idleTimer.current = window.setTimeout(() => {
+              applyEventRef.current({ type: 'IDLE_ELAPSED' })
+            }, effect.seconds * 1000)
+            break
+          case 'arm_warning':
+            clearTimers()
+            countdownTimer.current = window.setInterval(() => {
+              applyEventRef.current({ type: 'TICK' })
+            }, 1000)
+            warningTimer.current = window.setTimeout(() => {
+              applyEventRef.current({ type: 'WARNING_ELAPSED' })
+            }, effect.seconds * 1000)
+            break
+          case 'reset_app':
+            onResetRef.current()
+            break
+        }
+      }
+    },
+    [clearTimers],
+  )
 
-  const startWarning = useCallback(() => {
-    const warnFor = warningSecondsRef.current
-    warningVisibleRef.current = true
-    setWarningVisible(true)
-    setSecondsLeft(warnFor)
+  const applyEvent = useCallback(
+    (event: InactivityEvent) => {
+      const transition = reduceInactivity(stateRef.current, event, {
+        idleSeconds: timeoutSecondsRef.current,
+        warningSeconds: warningSecondsRef.current,
+      })
+      stateRef.current = transition.state
+      setState(transition.state)
+      runEffects(transition.effects)
+    },
+    [runEffects],
+  )
 
-    countdownTimer.current = window.setInterval(() => {
-      setSecondsLeft((prev) => Math.max(0, prev - 1))
-    }, 1000)
-
-    warningTimer.current = window.setTimeout(() => {
-      clearTimers()
-      warningVisibleRef.current = false
-      setWarningVisible(false)
-      onResetRef.current()
-    }, warnFor * 1000)
-  }, [clearTimers])
-
-  const bumpActivity = useCallback(() => {
-    if (!enabledRef.current) return
-    clearTimers()
-    dismissWarning()
-    idleTimer.current = window.setTimeout(() => {
-      startWarning()
-    }, timeoutSecondsRef.current * 1000)
-  }, [clearTimers, dismissWarning, startWarning])
-
-  const continuePlaying = useCallback(() => {
-    bumpActivity()
-  }, [bumpActivity])
+  useEffect(() => {
+    applyEventRef.current = applyEvent
+  }, [applyEvent])
 
   useEffect(() => {
     if (!enabled) {
-      clearTimers()
-      warningVisibleRef.current = false
-      queueMicrotask(() => {
-        setWarningVisible(false)
-        setSecondsLeft(warningSecondsRef.current)
-      })
+      applyEvent({ type: 'DISABLE' })
       return
     }
+
+    applyEvent({ type: 'ENABLE' })
 
     const events: Array<keyof WindowEventMap> = [
       'pointerdown',
@@ -112,27 +129,29 @@ export function useInactivityTimeout({
     ]
 
     const handler = () => {
-      if (warningVisibleRef.current) return
-      bumpActivity()
+      if (stateRef.current.status === 'warning') return
+      applyEvent({ type: 'ACTIVITY' })
     }
 
-    for (const event of events) {
-      window.addEventListener(event, handler, { passive: true })
+    for (const eventName of events) {
+      window.addEventListener(eventName, handler, { passive: true })
     }
-
-    bumpActivity()
 
     return () => {
-      for (const event of events) {
-        window.removeEventListener(event, handler)
+      for (const eventName of events) {
+        window.removeEventListener(eventName, handler)
       }
       clearTimers()
     }
-  }, [bumpActivity, clearTimers, enabled])
+  }, [applyEvent, clearTimers, enabled])
+
+  const continuePlaying = useCallback(() => {
+    applyEvent({ type: 'CONTINUE' })
+  }, [applyEvent])
 
   return {
-    warningVisible,
-    secondsLeft,
+    warningVisible: state.status === 'warning',
+    secondsLeft: state.secondsLeft,
     continuePlaying,
   }
 }

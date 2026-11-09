@@ -2,6 +2,7 @@ import { describe, expect, it } from 'vitest'
 import { foods } from '../data/foods'
 import { settings } from '../config/settings'
 import { validateFoodCards } from '../utils/validation'
+import { isResolved } from './cardPhase'
 import {
   advanceAfterFeedback,
   createSession,
@@ -56,7 +57,7 @@ describe('scoring and retries', () => {
     expect(result.correct).toBe(true)
     expect(result.completedCard).toBe(true)
     expect(result.session.pawsEarned).toBe(1)
-    expect(result.session.attempts[card.id].resolved).toBe(true)
+    expect(isResolved(result.session.attempts[card.id])).toBe(true)
   })
 
   it('allows one gentle retry before revealing', () => {
@@ -70,12 +71,17 @@ describe('scoring and retries', () => {
     expect(first.revealed).toBe(false)
     expect(first.completedCard).toBe(false)
     expect(first.session.pawsEarned).toBe(0)
+    expect(first.session.attempts[card.id].status).toBe('retry')
 
     const second = submitAnswer(first.session, wrong)
     expect(second.correct).toBe(false)
     expect(second.revealed).toBe(true)
     expect(second.completedCard).toBe(true)
     expect(second.session.pawsEarned).toBe(1)
+    expect(second.session.attempts[card.id]).toMatchObject({
+      status: 'resolved',
+      outcome: 'revealed',
+    })
   })
 
   it('still awards only one paw after retries then a correct answer', () => {
@@ -111,10 +117,9 @@ describe('reset between players', () => {
     expect(reset.pawsEarned).toBe(0)
     expect(reset.currentIndex).toBe(0)
     expect(reset.openClueIndexes).toEqual([])
-    expect(reset.lastFeedbackCorrect).toBeNull()
-    expect(Object.values(reset.attempts).every((item) => item.attempts === 0)).toBe(
-      true,
-    )
+    expect(
+      Object.values(reset.attempts).every((item) => item.status === 'ready'),
+    ).toBe(true)
   })
 
   it('marks the session complete after every card is resolved', () => {

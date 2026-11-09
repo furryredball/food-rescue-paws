@@ -1,16 +1,14 @@
-import { useCallback, useEffect, useMemo, useState } from 'react'
+import { useCallback, useEffect, useRef, useState } from 'react'
 import { foods } from './data/foods'
 import { settings } from './config/settings'
 import {
-  advanceAfterFeedback,
-  createSession,
-  getCurrentCard,
-  isSessionComplete,
-  resetSession,
-  submitAnswer,
-  toggleClue,
-  type SessionState,
-} from './game/session'
+  createAppState,
+  inactivityEnabled,
+  reduceApp,
+  type AppEvent,
+  type AppState,
+} from './game/appMachine'
+import { currentAttemptCount, getCurrentCard } from './game/session'
 import { useAudio } from './hooks/useAudio'
 import { useInactivityTimeout } from './hooks/useInactivityTimeout'
 import { InactivityWarning } from './components/InactivityWarning'
@@ -20,113 +18,47 @@ import { InspectionScreen } from './screens/InspectionScreen'
 import { FeedbackScreen } from './screens/FeedbackScreen'
 import { CompletionScreen } from './screens/CompletionScreen'
 import { AssetPreviewScreen } from './screens/AssetPreviewScreen'
-import type { AnswerValue, ScreenId } from './types/food'
 import { validateFoodCards } from './utils/validation'
 import './App.css'
-
-interface FeedbackState {
-  correct: boolean
-  revealed: boolean
-  selectedAnswer: AnswerValue
-}
 
 const validation = validateFoodCards(foods)
 
 export default function App() {
-  const [screen, setScreen] = useState<ScreenId>('welcome')
-  const [session, setSession] = useState<SessionState>(() => createSession(foods))
-  const [feedback, setFeedback] = useState<FeedbackState | null>(null)
   const { play, stopAll, unlock } = useAudio(settings.soundEnabled)
+  const [state, setState] = useState<AppState>(() => createAppState(foods))
+  const stateRef = useRef(state)
+  const audioApi = useRef({ play, stopAll, unlock })
+
+  useEffect(() => {
+    stateRef.current = state
+  }, [state])
+
+  useEffect(() => {
+    audioApi.current = { play, stopAll, unlock }
+  }, [play, stopAll, unlock])
+
+  const send = useCallback((event: AppEvent) => {
+    const transition = reduceApp(stateRef.current, event, foods)
+    stateRef.current = transition.state
+    setState(transition.state)
+
+    const audio = audioApi.current
+    if (transition.unlock) audio.unlock()
+    if (transition.stopAudio) audio.stopAll()
+    if (transition.sound) audio.play(transition.sound)
+  }, [])
 
   const hardReset = useCallback(() => {
-    stopAll()
-    setSession(resetSession(foods))
-    setFeedback(null)
-    setScreen('welcome')
-  }, [stopAll])
+    send({ type: 'HARD_RESET' })
+  }, [send])
 
   const { warningVisible, secondsLeft, continuePlaying } = useInactivityTimeout({
-    enabled: screen !== 'welcome' && screen !== 'asset-preview',
+    enabled: inactivityEnabled(state.phase),
     onReset: hardReset,
   })
 
-  useEffect(() => {
-    stopAll()
-  }, [screen, stopAll])
-
-  const currentCard = useMemo(() => getCurrentCard(session), [session])
-
-  const go = useCallback(
-    (next: ScreenId) => {
-      unlock()
-      setScreen(next)
-    },
-    [unlock],
-  )
-
-  const handleStart = () => {
-    unlock()
-    play('tap')
-    setSession(createSession(foods))
-    setFeedback(null)
-    go('instructions')
-  }
-
-  const handleBeginInspection = () => {
-    unlock()
-    play('tap')
-    go('inspection')
-  }
-
-  const handleAnswer = (answer: AnswerValue) => {
-    unlock()
-    const result = submitAnswer(session, answer)
-    setSession(result.session)
-    setFeedback({
-      correct: result.correct,
-      revealed: result.revealed,
-      selectedAnswer: answer,
-    })
-    if (result.correct) {
-      play('correct')
-    } else {
-      play('retry')
-    }
-    go('feedback')
-  }
-
-  const handleFeedbackContinue = () => {
-    unlock()
-    if (!feedback) return
-
-    if (!feedback.correct && !feedback.revealed) {
-      setFeedback(null)
-      play('tap')
-      go('inspection')
-      return
-    }
-
-    const advanced = advanceAfterFeedback(session)
-    setSession(advanced)
-    setFeedback(null)
-
-    if (isSessionComplete(advanced) || !getCurrentCard(advanced)) {
-      play('complete')
-      go('completion')
-      return
-    }
-
-    play('tap')
-    go('inspection')
-  }
-
-  const handlePlayAgain = () => {
-    unlock()
-    play('tap')
-    setSession(createSession(foods))
-    setFeedback(null)
-    go('welcome')
-  }
+  const { phase, session } = state
+  const currentCard = getCurrentCard(session)
 
   if (!validation.ok) {
     return (
@@ -145,58 +77,56 @@ export default function App() {
 
   return (
     <main className="app-shell">
-      {screen === 'welcome' ? (
+      {phase.status === 'welcome' ? (
         <WelcomeScreen
-          onStart={handleStart}
-          onOpenAssetPreview={() => go('asset-preview')}
+          onStart={() => send({ type: 'START' })}
+          onOpenAssetPreview={() => send({ type: 'OPEN_ASSET_PREVIEW' })}
         />
       ) : null}
 
-      {screen === 'instructions' ? (
+      {phase.status === 'instructions' ? (
         <InstructionsScreen
           cardCount={settings.sessionCardCount}
-          onBack={() => go('welcome')}
-          onContinue={handleBeginInspection}
+          onBack={() => send({ type: 'BACK_TO_WELCOME' })}
+          onContinue={() => send({ type: 'BEGIN_INSPECTION' })}
         />
       ) : null}
 
-      {screen === 'inspection' && currentCard ? (
+      {phase.status === 'inspection' && currentCard ? (
         <InspectionScreen
           card={currentCard}
           cardNumber={session.currentIndex + 1}
           totalCards={session.deck.length}
           pawsEarned={session.pawsEarned}
           openClueIndexes={session.openClueIndexes}
-          attemptNumber={session.attempts[currentCard.id]?.attempts ?? 0}
-          onToggleClue={(index) => {
-            unlock()
-            play('tap')
-            setSession((prev) => toggleClue(prev, index))
-          }}
-          onAnswer={handleAnswer}
+          attemptNumber={currentAttemptCount(session)}
+          onToggleClue={(index) => send({ type: 'TOGGLE_CLUE', index })}
+          onAnswer={(answer) => send({ type: 'ANSWER', answer })}
         />
       ) : null}
 
-      {screen === 'feedback' && currentCard && feedback ? (
+      {phase.status === 'feedback' && currentCard ? (
         <FeedbackScreen
           card={currentCard}
-          correct={feedback.correct}
-          revealed={feedback.revealed}
-          selectedAnswer={feedback.selectedAnswer}
-          onContinue={handleFeedbackContinue}
+          correct={phase.correct}
+          revealed={phase.revealed}
+          selectedAnswer={phase.selectedAnswer}
+          onContinue={() => send({ type: 'FEEDBACK_CONTINUE' })}
         />
       ) : null}
 
-      {screen === 'completion' ? (
+      {phase.status === 'completion' ? (
         <CompletionScreen
           pawsEarned={session.pawsEarned}
           totalCards={session.deck.length}
-          onPlayAgain={handlePlayAgain}
+          onPlayAgain={() => send({ type: 'PLAY_AGAIN' })}
         />
       ) : null}
 
-      {screen === 'asset-preview' ? (
-        <AssetPreviewScreen onBack={() => go('welcome')} />
+      {phase.status === 'asset-preview' ? (
+        <AssetPreviewScreen
+          onBack={() => send({ type: 'CLOSE_ASSET_PREVIEW' })}
+        />
       ) : null}
 
       {warningVisible ? (

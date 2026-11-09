@@ -1,21 +1,21 @@
 import { settings } from '../config/settings'
 import type { AnswerValue, FoodCard } from '../types/food'
+import {
+  applyAnswer,
+  attemptCount,
+  createReadyAttempt,
+  isResolved,
+  type CardAttempt,
+} from './cardPhase'
 
-export interface CardAttemptState {
-  cardId: string
-  attempts: number
-  resolved: boolean
-  lastAnswer: AnswerValue | null
-  revealed: boolean
-}
+export type { CardAttempt }
 
 export interface SessionState {
   deck: FoodCard[]
   currentIndex: number
   pawsEarned: number
-  attempts: Record<string, CardAttemptState>
+  attempts: Record<string, CardAttempt>
   openClueIndexes: number[]
-  lastFeedbackCorrect: boolean | null
 }
 
 export function shuffleInPlace<T>(items: T[], random = Math.random): T[] {
@@ -46,15 +46,9 @@ export function dealSessionCards(
 
 export function createSession(cards: FoodCard[]): SessionState {
   const deck = dealSessionCards(cards)
-  const attempts: Record<string, CardAttemptState> = {}
+  const attempts: Record<string, CardAttempt> = {}
   for (const card of deck) {
-    attempts[card.id] = {
-      cardId: card.id,
-      attempts: 0,
-      resolved: false,
-      lastAnswer: null,
-      revealed: false,
-    }
+    attempts[card.id] = createReadyAttempt()
   }
   return {
     deck,
@@ -62,7 +56,6 @@ export function createSession(cards: FoodCard[]): SessionState {
     pawsEarned: 0,
     attempts,
     openClueIndexes: [],
-    lastFeedbackCorrect: null,
   }
 }
 
@@ -82,10 +75,8 @@ export interface AnswerResult {
 }
 
 /**
- * Record an answer for the current card.
- * - Correct: award one paw (once), mark resolved.
- * - First wrong: gentle retry, do not advance.
- * - Second wrong: reveal answer, award one paw, mark resolved.
+ * Record an answer for the current card via the card-phase machine.
+ * Awards one paw when a card first becomes resolved (correct or revealed).
  */
 export function submitAnswer(
   session: SessionState,
@@ -97,60 +88,37 @@ export function submitAnswer(
   }
 
   const prior = session.attempts[card.id]
-  if (prior.resolved) {
-    return {
-      session,
-      correct: prior.lastAnswer === card.correctAnswer,
-      revealed: prior.revealed,
-      completedCard: false,
-    }
-  }
-
-  const correct = answer === card.correctAnswer
-  const attempts = prior.attempts + 1
-  const revealed = !correct && attempts >= 2
-  const completedCard = correct || revealed
+  const next = applyAnswer(prior, answer, card.correctAnswer)
   const pawsEarned =
-    completedCard && !prior.resolved
+    next.completed && !isResolved(prior)
       ? session.pawsEarned + 1
       : session.pawsEarned
-
-  const nextAttempts: CardAttemptState = {
-    cardId: card.id,
-    attempts,
-    resolved: completedCard,
-    lastAnswer: answer,
-    revealed,
-  }
 
   return {
     session: {
       ...session,
       pawsEarned,
-      openClueIndexes: completedCard ? [] : session.openClueIndexes,
-      lastFeedbackCorrect: correct,
+      openClueIndexes: next.completed ? [] : session.openClueIndexes,
       attempts: {
         ...session.attempts,
-        [card.id]: nextAttempts,
+        [card.id]: next.attempt,
       },
     },
-    correct,
-    revealed,
-    completedCard,
+    correct: next.correct,
+    revealed: next.revealed,
+    completedCard: next.completed,
   }
 }
 
 export function advanceAfterFeedback(session: SessionState): SessionState {
   const card = getCurrentCard(session)
   if (!card) return session
-  const state = session.attempts[card.id]
-  if (!state.resolved) return session
+  if (!isResolved(session.attempts[card.id])) return session
 
   return {
     ...session,
     currentIndex: Math.min(session.currentIndex + 1, session.deck.length),
     openClueIndexes: [],
-    lastFeedbackCorrect: null,
   }
 }
 
@@ -172,4 +140,10 @@ export function toggleClue(
 
 export function resetSession(cards: FoodCard[]): SessionState {
   return createSession(cards)
+}
+
+export function currentAttemptCount(session: SessionState): number {
+  const card = getCurrentCard(session)
+  if (!card) return 0
+  return attemptCount(session.attempts[card.id])
 }

@@ -1,23 +1,17 @@
 import { useCallback, useEffect, useRef } from 'react'
 import { settings } from '../config/settings'
+import { SOUND_FILES, type SoundCue } from '../game/sounds'
 import { assetUrl } from '../utils/assetUrl'
 
-export type SoundCue = 'correct' | 'retry' | 'complete' | 'tap'
-
-const SOUND_FILES: Record<SoundCue, string> = {
-  correct: 'audio/correct.mp3',
-  retry: 'audio/retry.mp3',
-  complete: 'audio/complete.mp3',
-  tap: 'audio/tap.mp3',
-}
+export type { SoundCue }
 
 /**
- * Sound plays only after a player gesture and never autoplays.
- * Call stopAll on screen changes or exhibition reset.
+ * Audio gate machine: locked → unlocked (after a player gesture).
+ * Sound never autoplays; stopAll on screen change / reset.
  */
 export function useAudio(enabled = settings.soundEnabled) {
   const audioRef = useRef<HTMLAudioElement | null>(null)
-  const unlockedRef = useRef(false)
+  const gateRef = useRef<'locked' | 'unlocked'>('locked')
 
   const stopAll = useCallback(() => {
     const current = audioRef.current
@@ -28,12 +22,12 @@ export function useAudio(enabled = settings.soundEnabled) {
   }, [])
 
   const unlock = useCallback(() => {
-    unlockedRef.current = true
+    gateRef.current = 'unlocked'
   }, [])
 
   const play = useCallback(
     (cue: SoundCue) => {
-      if (!enabled || !unlockedRef.current) return
+      if (!enabled || gateRef.current !== 'unlocked') return
 
       stopAll()
       const audio = new Audio(assetUrl(SOUND_FILES[cue]))

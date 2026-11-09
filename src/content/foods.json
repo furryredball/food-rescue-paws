@@ -321,6 +321,87 @@
         "fda-pets"
       ],
       "reviewStatus": "draft"
+    },
+    {
+      "id": "plain-tofu",
+      "title": {
+        "zhHant": "原味豆腐",
+        "en": "Plain tofu"
+      },
+      "image": "foods/plain-tofu.jpg",
+      "imageAlt": {
+        "zhHant": "盤子上的原味嫩豆腐塊，沒有調味",
+        "en": "Plain firm tofu cubes on a plate, no seasoning"
+      },
+      "preparation": {
+        "zhHant": "原味板豆腐，切小塊，沒有鹽、沒有醬油、沒有辣椒，新鮮放涼。",
+        "en": "Plain firm tofu, cut into small cubes, no salt, no soy sauce, no chilli, cool and fresh."
+      },
+      "clues": [
+        {
+          "zhHant": "沒有調味的豆腐，和滷味豆腐不一樣。",
+          "en": "Plain tofu is not the same as seasoned braised tofu."
+        },
+        {
+          "zhHant": "狗有時可以吃一點原味豆腐，但要先問大人。",
+          "en": "Dogs can sometimes share a little plain tofu when a grown-up says yes."
+        },
+        {
+          "zhHant": "貓通常更需要肉類食物，豆腐不是貓的首選。",
+          "en": "Cats usually need meaty foods, so tofu is not a useful choice for cats."
+        }
+      ],
+      "correctAnswer": "dog",
+      "explanation": {
+        "zhHant": "原味、無調味的豆腐，大人同意時可以當狗的點心想法。對貓來說不是有用的選擇。這不是份量指引。",
+        "en": "Plain, unseasoned tofu can be a snack idea for dogs when a grown-up agrees. It is not a useful food choice for cats. This is not a portion guide."
+      },
+      "sourceIds": [
+        "fda-pets",
+        "exhibition-note"
+      ],
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "raw-salmon",
+      "title": {
+        "zhHant": "生三文魚",
+        "en": "Raw salmon"
+      },
+      "image": "foods/raw-salmon.jpg",
+      "imageAlt": {
+        "zhHant": "盤子上的一片生三文魚刺身",
+        "en": "A piece of raw salmon fillet on a plate"
+      },
+      "preparation": {
+        "zhHant": "生的三文魚片，未煮熟，沒有醬汁，但處理過程不明。",
+        "en": "Raw salmon fillet, uncooked, no sauce, handling history unknown."
+      },
+      "clues": [
+        {
+          "zhHant": "生魚可能有寄生蟲或細菌風險。",
+          "en": "Raw fish can carry parasite or bacteria risks."
+        },
+        {
+          "zhHant": "清煮熟透的魚，和生魚不一樣。",
+          "en": "Fully cooked plain fish is not the same as raw fish."
+        },
+        {
+          "zhHant": "不要把壽司或生魚片直接給寵物。",
+          "en": "Do not offer sushi or raw fish to pets on your own."
+        }
+      ],
+      "correctAnswer": "neither",
+      "explanation": {
+        "zhHant": "生三文魚對狗和貓都不適合當檢查遊戲裡的安全選擇。請放著並告訴大人——真正餵食前一定要問大人。",
+        "en": "Raw salmon is not a safe choice for dogs or cats in this inspection game. Set it aside and tell a grown-up — always ask before feeding a real pet."
+      },
+      "sourceIds": [
+        "aspca-toxic",
+        "fda-pets",
+        "exhibition-note"
+      ],
+      "reviewStatus": "draft"
     }
   ]
 }

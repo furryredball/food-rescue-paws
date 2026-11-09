@@ -42,8 +42,8 @@ describe('session length', () => {
     expect(new Set(ids).size).toBe(settings.sessionCardCount)
   })
 
-  it('starts with eight draft cards available', () => {
-    expect(foods).toHaveLength(8)
+  it('starts with a draft deck larger than one session', () => {
+    expect(foods.length).toBeGreaterThanOrEqual(settings.sessionCardCount)
     expect(foods.every((card) => card.reviewStatus === 'draft')).toBe(true)
   })
 })

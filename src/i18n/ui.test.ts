@@ -7,7 +7,7 @@ import { isLocaleCopy } from './types'
 describe('bilingual copy', () => {
   it('keeps core UI strings in Traditional Chinese and English', () => {
     expect(isLocaleCopy(ui.brandName)).toBe(true)
-    expect(ui.brandName.zhHant).toContain('食物')
+    expect(ui.brandName.zhHant).toBe('爪爪救食大作戰')
     expect(ui.brandName.en).toContain('Food Rescue')
     expect(ANSWER_LABELS['ask-grown-up'].zhHant).toBe('先問大人')
     expect(ANSWER_LABELS.dog.en).toBe('Dog snack')

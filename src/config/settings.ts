@@ -16,7 +16,7 @@ export const settings = {
   soundEnabled: true,
 
   /** Dev-only asset preview can be opened from the adult panel. */
-  allowAssetPreview: true,
+  allowAssetPreview: false,
 } as const
 
 export type Settings = typeof settings

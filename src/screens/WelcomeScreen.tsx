@@ -2,6 +2,7 @@ import { AdultInfoPanel } from '../components/AdultInfoPanel'
 import { BiText } from '../components/BiText'
 import { biAria } from '../i18n/format'
 import { SafeImage } from '../components/SafeImage'
+import { Speech } from '../components/Speech'
 import { ui } from '../i18n/ui'
 
 interface WelcomeScreenProps {
@@ -31,6 +32,10 @@ export function WelcomeScreen({
       </div>
 
       <BiText copy={ui.welcomeLede} as="p" className="lede" />
+
+      <div className="speech-row">
+        <Speech who="pip" line={ui.pipGreet} />
+      </div>
 
       <div className="hero-stage">
         <div className="hero-stage__stickers" aria-hidden="true">

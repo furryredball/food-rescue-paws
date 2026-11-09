@@ -2,6 +2,7 @@ import { BiText } from '../components/BiText'
 import { biAria } from '../i18n/format'
 import { ProgressPaws } from '../components/ProgressPaws'
 import { SafeImage } from '../components/SafeImage'
+import { Speech } from '../components/Speech'
 import { ui } from '../i18n/ui'
 
 interface CompletionScreenProps {
@@ -39,6 +40,7 @@ export function CompletionScreen({
         className="lede"
       />
       <ProgressPaws earned={pawsEarned} total={totalCards} />
+      <Speech who="miso" line={ui.misoDone} />
       <button
         type="button"
         className="btn btn--primary btn--xl"

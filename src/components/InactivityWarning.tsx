@@ -1,4 +1,5 @@
 import { ui } from '../i18n/ui'
+import { Speech } from './Speech'
 import { BiText } from './BiText'
 
 interface InactivityWarningProps {
@@ -20,6 +21,7 @@ export function InactivityWarning({
     >
       <div className="inactivity-warning__panel">
         <BiText copy={ui.stillPlaying} as="h2" id="inactivity-title" />
+        <Speech who="pip" line={ui.pipIdle} />
         <BiText
           copy={ui.inactivityDesc(secondsLeft)}
           as="p"

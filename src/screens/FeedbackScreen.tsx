@@ -1,4 +1,5 @@
 import { BiText } from '../components/BiText'
+import { Speech } from '../components/Speech'
 import { copy, type LocaleCopy } from '../i18n/types'
 import { ANSWER_LABELS, ui } from '../i18n/ui'
 import type { AnswerValue, FoodCard } from '../types/food'
@@ -21,12 +22,17 @@ export function FeedbackScreen({
   let title = ui.feedbackNice
   let body: LocaleCopy = card.explanation
   let result = ui.feedbackCorrect
+  let beat: 'pip' | 'miso' = 'pip'
+  let beatLine = ui.pipCorrect
 
   if (!correct && !revealed) {
+    beatLine = ui.pipRetry
     title = ui.feedbackAlmost
     body = ui.feedbackRetryBody
     result = ui.feedbackRetry
   } else if (!correct && revealed) {
+    beat = 'miso'
+    beatLine = ui.misoHandoff
     title = ui.feedbackLearn
     const helpful = ui.helpfulAnswerIs(ANSWER_LABELS[card.correctAnswer])
     body = copy(
@@ -62,6 +68,8 @@ export function FeedbackScreen({
           className="feedback-banner__choice"
         />
       </div>
+
+      <Speech who={beat} line={beatLine} />
 
       <BiText copy={ui.reminderAskGrownUp} as="p" className="reminder" />
 

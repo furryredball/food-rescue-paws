@@ -856,3 +856,44 @@ h2 {
     animation: none;
   }
 }
+
+.speech {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  margin: 0.45rem auto 0;
+  max-width: 640px;
+}
+
+.speech__art {
+  width: 44px;
+  height: 44px;
+  flex: 0 0 auto;
+}
+
+.speech__bubble {
+  flex: 1;
+  padding: 0.55rem 0.85rem;
+  border: var(--border);
+  border-radius: var(--radius);
+  background: var(--cream);
+  text-align: left;
+}
+
+.speech--miso .speech__bubble {
+  background: var(--sky);
+}
+
+.speech__text {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.speech__name {
+  display: block;
+  margin-top: 0.15rem;
+  font-size: 0.8rem;
+  font-weight: 800;
+  opacity: 0.65;
+}

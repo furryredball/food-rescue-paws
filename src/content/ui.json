@@ -273,5 +273,29 @@
   "adultPanelBody": {
     "zhHant": "呢個遊戲，只教一個習慣：餵之前，先問大人。遊戲入面嘅食物，係廚房或街市未用過、仲安全嘅剩餘食物，同食剩嘅餸、壞咗嘅食物唔同。答案由我哋根據 ASPCA 同 FDA 嘅公開指引整理，唔係獸醫建議，亦都唔會教你餵幾多。同小朋友坐低一齊讀，就係最好嘅玩法。",
     "en": "This game teaches one habit: ask a grown-up before feeding a pet. The foods in it are unused, still-safe surplus from kitchens and markets — not plate scraps, and not spoiled food. Our answers are put together from public guidance by the ASPCA and the FDA. It is not veterinary advice, and it will not tell you how much to feed. Sit down and read it together — that is the whole game."
+  },
+  "pipGreet": {
+    "zhHant": "我係 Pip。我個鼻好忙，負責聞。",
+    "en": "I'm Pip. My nose does most of my thinking."
+  },
+  "pipRetry": {
+    "zhHant": "唔緊要，我第一次都揀錯。",
+    "en": "It's okay. I get these wrong too."
+  },
+  "pipCorrect": {
+    "zhHant": "掂！呢隻爪印我幫你踩。",
+    "en": "Yes! I'll stamp this paw for you."
+  },
+  "misoHandoff": {
+    "zhHant": "去搵大人。我陪你行過去。",
+    "en": "Go find a grown-up. I'll walk with you."
+  },
+  "pipIdle": {
+    "zhHant": "仲喺度？我等你。",
+    "en": "Still there? I'll wait."
+  },
+  "misoDone": {
+    "zhHant": "唔好話畀佢知我咁講。",
+    "en": "Don't tell him I said that."
   }
 }

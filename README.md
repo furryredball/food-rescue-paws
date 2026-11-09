@@ -102,40 +102,34 @@ Open **Grown-ups: safety & sources → Open asset preview** on the welcome scree
 - Audio never autoplays; a player gesture is required.
 - Selected pre-consumer surplus is not the same as plate scraps or spoiled food.
 
-## Deploy to GitHub Pages (subdirectory)
+## Deploy to GitHub Pages
 
-GitHub project sites are served from `https://<user>.github.io/<repo>/`. Vite must set `base` to `/<repo>/` so JS, CSS, favicon and `public/assets` files resolve under that subdirectory.
+Public site: [https://furryredball.github.io/food-rescue-paws/](https://furryredball.github.io/food-rescue-paws/)
+
+GitHub project sites are served from `https://furryredball.github.io/food-rescue-paws/`. Vite sets `base` to `/food-rescue-paws/` so JS, CSS, favicon and `public/assets` resolve under that subdirectory.
 
 ### How this repo does it
 
-- `vite.config.ts` sets `base` from `BASE_PATH`, or from `GITHUB_REPOSITORY` in Actions, otherwise `/` for local dev.
-- Runtime media uses `import.meta.env.BASE_URL` via `src/utils/assetUrl.ts` / `publicUrl()`.
-- `index.html` references the favicon as `%BASE_URL%favicon.svg`.
-- `.github/workflows/deploy-github-pages.yml` builds with `BASE_PATH=/<repo-name>/` and deploys the `dist/` artifact.
+- Target repository: `furryredball/food-rescue-paws`
+- `vite.config.ts` sets `base` from `BASE_PATH`, or `/food-rescue-paws/` on GitHub Actions, otherwise `/` for local dev
+- Runtime media uses `import.meta.env.BASE_URL` via `src/utils/assetUrl.ts` / `publicUrl()`
+- `index.html` references the favicon as `%BASE_URL%favicon.svg`
+- `.github/workflows/deploy-github-pages.yml` builds with `BASE_PATH=/food-rescue-paws/` and deploys `dist/`
 
 ### One-time GitHub setup
 
-1. Push this repository to GitHub.
+1. Create the GitHub repository `food-rescue-paws` under the `furryredball` account and connect this project to it.
 2. Settings → Pages → Build and deployment → Source: **GitHub Actions**.
-3. Push to `main` (or run the workflow manually). The site will be at `https://<user>.github.io/<repo>/`.
+3. Push to `main` (or run the workflow manually).
 
 ### Local subdirectory build check
 
 ```bash
-# Uses package.json "name" as the subdirectory, e.g. /food-rescue-paws/
 npm run build:gh-pages
 npm run preview
 ```
 
-Or set the path explicitly:
-
-```bash
-BASE_PATH=/your-repo-name/ npm run build
-```
-
-Open the preview URL and confirm network requests for `/your-repo-name/assets/...` succeed.
-
-If you rename the repository, either keep using the Actions `BASE_PATH` (it follows the repo name) or update `package.json` `name` when using `build:gh-pages` locally.
+Open the preview URL and confirm network requests for `/food-rescue-paws/assets/...` succeed.
 
 ## Project map
 

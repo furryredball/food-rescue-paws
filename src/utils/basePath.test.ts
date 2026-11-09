@@ -29,10 +29,11 @@ describe('resolveBasePath', () => {
     ).toBe('/food-rescue-paws/')
   })
 
-  it('derives /<repo>/ from GITHUB_REPOSITORY', () => {
+  it('pins furryredball.github.io/food-rescue-paws/ under Actions', () => {
     expect(
       resolveBasePath({
-        GITHUB_REPOSITORY: 'acme/food-rescue-paws',
+        GITHUB_ACTIONS: 'true',
+        GITHUB_REPOSITORY: 'furryredball/food-rescue-paws',
       }),
     ).toBe('/food-rescue-paws/')
   })

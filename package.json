@@ -3,10 +3,11 @@
   "private": true,
   "version": "1.0.0",
   "type": "module",
+  "homepage": "https://furryredball.github.io/food-rescue-paws/",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
-    "build:gh-pages": "tsc -b && BASE_PATH=/${npm_package_name}/ vite build",
+    "build:gh-pages": "tsc -b && BASE_PATH=/food-rescue-paws/ vite build",
     "preview:gh-pages": "npm run build:gh-pages && vite preview",
     "lint": "oxlint",
     "preview": "vite preview",

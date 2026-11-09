@@ -104,46 +104,38 @@ Open **Grown-ups: safety & sources → Open asset preview** on the welcome scree
 
 ## Deploy to GitHub Pages (subdirectory)
 
-This app is static and expects to run under a repository subdirectory when hosted on GitHub Pages.
+GitHub project sites are served from `https://<user>.github.io/<repo>/`. Vite must set `base` to `/<repo>/` so JS, CSS, favicon and `public/assets` files resolve under that subdirectory.
 
-1. In the repository settings, enable GitHub Pages from the `gh-pages` branch or GitHub Actions artifact.
-2. Build with a matching base path:
+### How this repo does it
+
+- `vite.config.ts` sets `base` from `BASE_PATH`, or from `GITHUB_REPOSITORY` in Actions, otherwise `/` for local dev.
+- Runtime media uses `import.meta.env.BASE_URL` via `src/utils/assetUrl.ts` / `publicUrl()`.
+- `index.html` references the favicon as `%BASE_URL%favicon.svg`.
+- `.github/workflows/deploy-github-pages.yml` builds with `BASE_PATH=/<repo-name>/` and deploys the `dist/` artifact.
+
+### One-time GitHub setup
+
+1. Push this repository to GitHub.
+2. Settings → Pages → Build and deployment → Source: **GitHub Actions**.
+3. Push to `main` (or run the workflow manually). The site will be at `https://<user>.github.io/<repo>/`.
+
+### Local subdirectory build check
 
 ```bash
-# Example when the repo name is food-rescue-paws
-BASE_PATH=/food-rescue-paws/ npm run build
-```
-
-Or use the helper script (uses the `name` field from `package.json`):
-
-```bash
+# Uses package.json "name" as the subdirectory, e.g. /food-rescue-paws/
 npm run build:gh-pages
+npm run preview
 ```
 
-3. Publish the contents of `dist/`.
+Or set the path explicitly:
 
-Example GitHub Actions workflow sketch:
-
-```yaml
-jobs:
-  deploy:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 22
-          cache: npm
-      - run: npm ci
-      - run: npm test
-      - run: npm run build:gh-pages
-      - uses: peaceiris/actions-gh-pages@v4
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
+```bash
+BASE_PATH=/your-repo-name/ npm run build
 ```
 
-If you later rename the package/repo, update `package.json` `name` or pass `BASE_PATH` explicitly so asset URLs stay correct.
+Open the preview URL and confirm network requests for `/your-repo-name/assets/...` succeed.
+
+If you rename the repository, either keep using the Actions `BASE_PATH` (it follows the repo name) or update `package.json` `name` when using `build:gh-pages` locally.
 
 ## Project map
 

@@ -13,7 +13,7 @@
         "en": "Pieces of plain cooked chicken breast on a clean plate"
       },
       "preparation": {
-        "zhHant": "完全煮熟，沒有骨頭、沒有皮、沒有調味、沒有醬汁，已放涼且新鮮。",
+        "zhHant": "完全煮熟，冇骨頭、冇皮、冇調味、冇醬汁，已放涼且新鮮。",
         "en": "Fully cooked, no bones, no skin, no seasoning, no sauce, still cool and fresh."
       },
       "clues": [
@@ -22,18 +22,18 @@
           "en": "Bones can hurt pets."
         },
         {
-          "zhHant": "鹽、洋蔥和大蒜醬料並不安全。",
+          "zhHant": "鹽、洋蔥同大蒜醬料並不安全。",
           "en": "Salt, onion and garlic sauces are not safe."
         },
         {
-          "zhHant": "大人同意時，狗和貓都可以分享清煮的肉。",
+          "zhHant": "大人同意時，狗同貓都可以分享清煮的肉。",
           "en": "Both dogs and cats can share plain cooked meat when a grown-up says yes."
         }
       ],
       "correctAnswer": "both",
       "explanation": {
-        "zhHant": "沒有骨頭、沒有調味的清煮雞肉，狗和貓都可能可以吃——但一定要先問大人。這個遊戲不會決定真正的餐點。",
-        "en": "Plain cooked chicken without bones or seasoning can be okay for dogs and cats — but only if a grown-up checks first. This game never decides a real meal."
+        "zhHant": "冇骨冇調味嘅清煮雞肉，狗同貓都食得——但要大人先話事。",
+        "en": "Plain cooked chicken with no bones or seasoning can be okay for dogs and cats — but only when a grown-up says yes."
       },
       "sourceIds": [
         "aspca-toxic",
@@ -50,11 +50,11 @@
       },
       "image": "foods/raw-onion.jpg",
       "imageAlt": {
-        "zhHant": "一顆生洋蔥和切好的洋蔥塊",
+        "zhHant": "一顆生洋蔥同切好的洋蔥塊",
         "en": "A whole raw onion and chopped onion pieces"
       },
       "preparation": {
-        "zhHant": "生的、切碎的，沒有烹調，也沒有和其他材料混合。",
+        "zhHant": "生的、切碎的，冇烹調，也冇同其他材料混合。",
         "en": "Raw, chopped, no cooking, no other ingredients mixed in."
       },
       "clues": [
@@ -67,14 +67,14 @@
           "en": "Even cooked onion in leftovers is a problem."
         },
         {
-          "zhHant": "這不是狗或貓的點心。",
+          "zhHant": "呢不是狗或貓的點心。",
           "en": "This is not a treat for dogs or cats."
         }
       ],
       "correctAnswer": "neither",
       "explanation": {
-        "zhHant": "洋蔥對狗和貓都不安全。請放在一旁並告訴大人——千萬不要把洋蔥給寵物。",
-        "en": "Onion is not safe for dogs or cats. Put it aside and tell a grown-up — never offer onion to a pet."
+        "zhHant": "洋蔥唔可以畀毛孩食——記住呢樣就夠。擺低佢，話畀大人知。",
+        "en": "Onion is not safe for dogs or cats. Set it aside and tell a grown-up."
       },
       "sourceIds": [
         "aspca-toxic",
@@ -85,16 +85,16 @@
     {
       "id": "plain-cooked-carrot",
       "title": {
-        "zhHant": "清煮胡蘿蔔",
+        "zhHant": "清煮紅蘿蔔",
         "en": "Plain cooked carrot"
       },
       "image": "foods/plain-cooked-carrot.jpg",
       "imageAlt": {
-        "zhHant": "沒有調味的軟熟胡蘿蔔片",
+        "zhHant": "冇調味嘅軟熟紅蘿蔔片",
         "en": "Soft cooked carrot slices without seasoning"
       },
       "preparation": {
-        "zhHant": "蒸至軟熟後放涼，沒有牛油、沒有鹽、沒有蜜糖釉。",
+        "zhHant": "蒸至軟熟後放涼，冇牛油、冇鹽、冇蜜糖釉。",
         "en": "Steamed until soft, cooled, no butter, no salt, no honey glaze."
       },
       "clues": [
@@ -107,14 +107,14 @@
           "en": "Dogs often enjoy plain carrot."
         },
         {
-          "zhHant": "貓通常比較喜歡肉類食物，胡蘿蔔不是貓的首選。",
+          "zhHant": "貓通常比較鍾意肉類食物，紅蘿蔔不是貓的首選。",
           "en": "Cats usually prefer meaty foods, so carrot is not a cat favourite."
         }
       ],
       "correctAnswer": "dog",
       "explanation": {
-        "zhHant": "大人同意時，清煮胡蘿蔔可以當狗的點心。貓不需要胡蘿蔔，所以這張卡把它算作狗點心——胡蘿蔔本身不是毒藥。這不是份量指引。",
-        "en": "Plain cooked carrot can be a snack idea for dogs when a grown-up agrees. Cats do not need carrot, so this card calls it a dog snack — carrot itself is not a poison. This is not a portion guide."
+        "zhHant": "紅蘿蔔蒸到軟，冇鹽冇油。大人話得，狗狗食得開心；貓寧願食肉。",
+        "en": "Soft, plain carrot is a good snack for dogs when a grown-up says yes. Cats would rather have meat."
       },
       "sourceIds": [
         "fda-pets",
@@ -125,35 +125,35 @@
     {
       "id": "grape-cluster",
       "title": {
-        "zhHant": "葡萄",
+        "zhHant": "提子",
         "en": "Grapes"
       },
       "image": "foods/grape-cluster.jpg",
       "imageAlt": {
-        "zhHant": "一小串新鮮紫葡萄",
+        "zhHant": "一小串新鮮紫提子",
         "en": "A small cluster of fresh purple grapes"
       },
       "preparation": {
-        "zhHant": "新鮮整顆葡萄，已清洗，尚未去梗。",
+        "zhHant": "新鮮整顆提子，洗好咗，未去梗。",
         "en": "Fresh whole grapes, washed, no stems removed yet."
       },
       "clues": [
         {
-          "zhHant": "葡萄和提子乾可能對狗很危險。",
-          "en": "Grapes and raisins can be dangerous for dogs."
+          "zhHant": "我哋看不到每樣材料。",
+          "en": "We cannot see every ingredient."
         },
         {
-          "zhHant": "貓食了葡萄也可能腸胃不舒服。",
-          "en": "Cats can also get a sore stomach from grapes."
+          "zhHant": "盤中剩菜可能有洋蔥、鹽或醬汁。",
+          "en": "Plate scraps may include onion, salt or sauce."
         },
         {
-          "zhHant": "如果在寵物碗附近看到葡萄，立刻問大人。",
-          "en": "If you see grapes near pet bowls, ask a grown-up right away."
+          "zhHant": "我哋睇唔到／唔清楚就要問大人。",
+          "en": "When information is missing, ask a grown-up."
         }
       ],
       "correctAnswer": "neither",
       "explanation": {
-        "zhHant": "葡萄和提子乾可以令狗腎臟衰竭，而且沒有一個安全份量可以估。貓吃了也可能腸胃不舒服——所以所有寵物都要遠離葡萄，並且要告訴大人。",
+        "zhHant": "提子同提子乾可以令狗腎衰竭，而且冇一個安全份量可以估。貓食咗也可能腸胃唔舒服——所以所有毛孩都要遠離提子，同埋話畀大人知。",
         "en": "Grapes and raisins can cause kidney failure in dogs, and there is no safe amount to guess. Cats can also get a sore stomach from them — so keep grapes away from every pet and tell a grown-up."
       },
       "sourceIds": [
@@ -174,12 +174,12 @@
         "en": "A covered bowl of mixed leftovers with unknown ingredients"
       },
       "preparation": {
-        "zhHant": "蓋著的混合剩菜。標籤缺失。氣味和成分都不清楚。",
+        "zhHant": "蓋著的混合剩菜。標籤缺失。氣味同成分都不清楚。",
         "en": "Covered mixed leftovers. Label is missing. Smell and ingredients are unknown."
       },
       "clues": [
         {
-          "zhHant": "我們看不到每樣材料。",
+          "zhHant": "我哋看不到每樣材料。",
           "en": "We cannot see every ingredient."
         },
         {
@@ -187,14 +187,14 @@
           "en": "Plate scraps may include onion, salt or sauce."
         },
         {
-          "zhHant": "資料不足時，要先問大人。",
+          "zhHant": "睇唔清楚，先問大人。",
           "en": "When information is missing, ask a grown-up."
         }
       ],
       "correctAnswer": "ask-grown-up",
       "explanation": {
-        "zhHant": "重要細節缺失，所以安全的答案是先問大人。不要猜。",
-        "en": "Important details are missing, so the safe answer is ask a grown-up. Never guess."
+        "zhHant": "碗蓋住咗，我哋睇唔到入面有咩。最安全嘅答案係：問大人。寧願問，好過估。",
+        "en": "We can't tell what's in this bowl, so the safe answer is: ask a grown-up. Better to ask than to guess."
       },
       "sourceIds": [
         "exhibition-note",
@@ -214,7 +214,7 @@
         "en": "Flaked plain cooked white fish without bones"
       },
       "preparation": {
-        "zhHant": "完全煮熟，仔細去骨，沒有油、沒有檸檬牛油，已放涼。",
+        "zhHant": "完全煮熟，仔細去骨，冇油、冇檸檬牛油，已放涼。",
         "en": "Fully cooked, carefully deboned, no oil, no lemon butter, cooled."
       },
       "clues": [
@@ -223,18 +223,18 @@
           "en": "Bones must be removed."
         },
         {
-          "zhHant": "大人同意時，清淡魚肉可能適合貓和狗。",
+          "zhHant": "大人同意時，清淡魚肉可能適合貓同狗。",
           "en": "Plain fish can suit cats and dogs when a grown-up approves."
         },
         {
-          "zhHant": "餐廳調味魚和清煮魚不一樣。",
+          "zhHant": "餐廳調味魚同清煮魚不一樣。",
           "en": "Seasoned restaurant fish is not the same as plain fish."
         }
       ],
       "correctAnswer": "both",
       "explanation": {
-        "zhHant": "大人檢查後，去骨的清煮魚可能適合狗和貓。這不是食譜或份量指引。",
-        "en": "Plain, boneless cooked fish can be okay for dogs and cats after a grown-up checks. This is not a recipe or portion guide."
+        "zhHant": "大人檢查後，去骨嘅清煮魚可能適合狗同貓。",
+        "en": "Plain, boneless cooked fish can be okay for dogs and cats after a grown-up checks."
       },
       "sourceIds": [
         "fda-pets",
@@ -254,7 +254,7 @@
         "en": "A square chocolate brownie on a napkin"
       },
       "preparation": {
-        "zhHant": "烤焗朱古力甜品，有糖、可可和牛油。",
+        "zhHant": "烤焗朱古力甜品，有糖、可可同牛油。",
         "en": "Baked chocolate dessert with sugar, cocoa and butter."
       },
       "clues": [
@@ -273,7 +273,7 @@
       ],
       "correctAnswer": "neither",
       "explanation": {
-        "zhHant": "朱古力對狗和貓都不安全。把布朗尼留給人，如果寵物可能吃了，要告訴大人。",
+        "zhHant": "朱古力對狗同貓都不安全。把布朗尼留給人，如果寵物可能吃了，要告訴大人。",
         "en": "Chocolate is not safe for dogs or cats. Save the brownie for people and tell a grown-up if a pet might have eaten some."
       },
       "sourceIds": [
@@ -299,11 +299,11 @@
       },
       "clues": [
         {
-          "zhHant": "油和調味醬會改變是否安全。",
+          "zhHant": "油同醬汁會改變食唔食得。",
           "en": "Oil and flavoured sauces change what is safe."
         },
         {
-          "zhHant": "我們看不到完整標籤。",
+          "zhHant": "我哋看不到完整標籤。",
           "en": "We cannot read the full label."
         },
         {
@@ -313,8 +313,8 @@
       ],
       "correctAnswer": "ask-grown-up",
       "explanation": {
-        "zhHant": "因為浸泡液體和調味不明，決定前先問大人。不要自己用不明罐頭餵寵物。",
-        "en": "Because the packing liquid and seasonings are unknown, ask a grown-up before deciding. Never feed from an unknown tin on your own."
+        "zhHant": "唔知罐入面係水、油定醬汁——餵之前先問大人。",
+        "en": "We can't tell if this tin holds water, oil or sauce — so ask a grown-up before feeding."
       },
       "sourceIds": [
         "exhibition-note",
@@ -330,16 +330,16 @@
       },
       "image": "foods/plain-tofu.jpg",
       "imageAlt": {
-        "zhHant": "盤子上的原味嫩豆腐塊，沒有調味",
+        "zhHant": "盤子上的原味嫩豆腐塊，冇調味",
         "en": "Plain firm tofu cubes on a plate, no seasoning"
       },
       "preparation": {
-        "zhHant": "原味板豆腐，切小塊，沒有鹽、沒有醬油、沒有辣椒，新鮮放涼。",
+        "zhHant": "原味板豆腐，切小塊，冇鹽、冇醬油、冇辣椒，新鮮放涼。",
         "en": "Plain firm tofu, cut into small cubes, no salt, no soy sauce, no chilli, cool and fresh."
       },
       "clues": [
         {
-          "zhHant": "沒有調味的豆腐，和滷味豆腐不一樣。",
+          "zhHant": "冇調味的豆腐，同滷味豆腐不一樣。",
           "en": "Plain tofu is not the same as seasoned braised tofu."
         },
         {
@@ -347,14 +347,14 @@
           "en": "Dogs can sometimes share a little plain tofu when a grown-up says yes."
         },
         {
-          "zhHant": "貓通常更需要肉類食物，豆腐不是貓的首選。",
-          "en": "Cats usually need meaty foods, so tofu is not a useful choice for cats."
+          "zhHant": "貓寧願食肉，豆腐不是貓的首選。",
+          "en": "Cats would rather have meat — so tofu is not a cat favourite."
         }
       ],
       "correctAnswer": "dog",
       "explanation": {
-        "zhHant": "原味、沒有調味的豆腐，大人同意時可以當狗的點心。貓不需要豆腐，所以這張卡把它算作狗點心——豆腐本身不是毒藥。這不是份量指引。",
-        "en": "Plain, unseasoned tofu can be a snack idea for dogs when a grown-up agrees. Cats do not need tofu, so this card calls it a dog snack — tofu itself is not a poison. This is not a portion guide."
+        "zhHant": "原味豆腐冇鹽冇醬油冇辣椒。大人話得，狗狗食得開心；貓寧願食肉。",
+        "en": "Plain tofu is a good snack for dogs when a grown-up says yes. Cats would rather have meat."
       },
       "sourceIds": [
         "fda-pets",
@@ -374,16 +374,16 @@
         "en": "A piece of raw salmon fillet on a plate"
       },
       "preparation": {
-        "zhHant": "生的三文魚片，未煮熟，沒有醬汁，但處理過程不明。",
+        "zhHant": "生的三文魚片，未煮熟，冇醬汁，但處理過程不明。",
         "en": "Raw salmon fillet, uncooked, no sauce, handling history unknown."
       },
       "clues": [
         {
-          "zhHant": "生魚可能有寄生蟲、細菌，還有會破壞維他命B1的物質。",
+          "zhHant": "生魚可能有寄生蟲、細菌，同埋會破壞維他命B1嘅物質。",
           "en": "Raw fish can carry parasites, bacteria, and something that destroys vitamin B1."
         },
         {
-          "zhHant": "清煮熟透的魚，和生魚不一樣。",
+          "zhHant": "清煮熟透的魚，同生魚不一樣。",
           "en": "Fully cooked plain fish is not the same as raw fish."
         },
         {
@@ -393,8 +393,8 @@
       ],
       "correctAnswer": "neither",
       "explanation": {
-        "zhHant": "生魚對狗和貓都不是安全的選擇。生魚可能有寄生蟲和細菌，而且含有一種物質會破壞維他命B1——貓最容易受影響。請放在一邊並告訴大人。",
-        "en": "Raw fish is not a safe choice for dogs or cats. It can carry parasites and bacteria, and something in it destroys vitamin B1 — cats are the ones most easily harmed. Set it aside and tell a grown-up."
+        "zhHant": "生魚唔啱狗同貓食。可能有寄生蟲同細菌，仲有一種嘢會破壞維他命B1——貓最容易受影響。擺低佢，去叫大人嚟睇。",
+        "en": "Raw fish isn't safe for dogs or cats. It can carry parasites and bacteria, and something in it destroys vitamin B1 — cats get hurt the most. Leave it on the plate and get a grown-up to check."
       },
       "sourceIds": [
         "aspca-toxic",
@@ -424,7 +424,7 @@
           "en": "Candy is a people sweet, not pet food."
         },
         {
-          "zhHant": "無糖香口膠和無糖糖果可能含木糖醇，對狗非常危險。",
+          "zhHant": "無糖香口膠同無糖糖果可能含木糖醇，對狗非常危險。",
           "en": "Sugar-free gum and sugar-free candy can contain xylitol, which is very dangerous for dogs."
         },
         {
@@ -434,7 +434,7 @@
       ],
       "correctAnswer": "neither",
       "explanation": {
-        "zhHant": "糖果不是寵物食物。無糖香口膠和無糖糖果可能含木糖醇，對狗非常危險——如果寵物吃了，要立刻告訴大人。",
+        "zhHant": "糖果唔係毛孩食物。無糖香口膠同無糖糖果可能含木糖醇，對狗好危險——毛孩食咗就即刻話畀大人知。",
         "en": "Candy is not pet food. Sugar-free gum and candy can contain xylitol, which is very dangerous for dogs — if a pet eats any, tell a grown-up straight away."
       },
       "sourceIds": [
@@ -455,27 +455,27 @@
         "en": "A fresh watermelon slice with no seeds shown"
       },
       "preparation": {
-        "zhHant": "新鮮西瓜果肉，已去籽、去皮，沒有糖或鹽。",
+        "zhHant": "新鮮西瓜果肉，已去籽、去皮，冇糖或鹽。",
         "en": "Fresh watermelon flesh only — no seeds, no rind, no sugar or salt."
       },
       "clues": [
         {
-          "zhHant": "籽和綠皮不要給寵物。",
+          "zhHant": "籽同綠皮不要給寵物。",
           "en": "Seeds and green rind should not go to pets."
         },
         {
-          "zhHant": "純果肉、大人同意時，狗和貓都可能可以分享一點。",
+          "zhHant": "純果肉、大人同意時，狗同貓都可能可以分享一點。",
           "en": "Plain flesh can be okay for dogs and cats when a grown-up says yes."
         },
         {
-          "zhHant": "這不是正餐，只是檢查練習。",
+          "zhHant": "呢不是正餐，只是檢查練習。",
           "en": "This is not a meal — only an inspection practice."
         }
       ],
       "correctAnswer": "both",
       "explanation": {
-        "zhHant": "去籽去皮的西瓜果肉，大人同意時狗和貓都可以試少少——但貓不需要水果，一小口就夠，不是一碗。這不是份量指引。",
-        "en": "Seedless, rind-free watermelon flesh is safe for dogs and cats to taste when a grown-up agrees — but cats do not need fruit, so one small taste is the limit, not a bowl. This is not a portion guide."
+        "zhHant": "去核去皮嘅西瓜肉，大人話得狗同貓都可以試少少——但貓唔需要水果，一小口就夠，唔係一碗。",
+        "en": "Seedless, rind-free watermelon flesh is safe for dogs and cats to taste when a grown-up agrees — but cats do not need fruit, so one small taste is the limit, not a bowl."
       },
       "sourceIds": [
         "fda-pets",
@@ -495,7 +495,7 @@
         "en": "A small bowl of plain cooked corn kernels off the cob"
       },
       "preparation": {
-        "zhHant": "清煮玉米粒，已從玉米芯取下，沒有牛油、沒有鹽。",
+        "zhHant": "清煮玉米粒，已從玉米芯取下，冇牛油、冇鹽。",
         "en": "Plain cooked corn kernels taken off the cob, no butter, no salt."
       },
       "clues": [
@@ -508,14 +508,14 @@
           "en": "Dogs can sometimes share a little plain corn kernels."
         },
         {
-          "zhHant": "貓通常更喜歡肉類，玉米不是貓的首選。",
-          "en": "Cats usually prefer meaty foods, so corn is not a useful choice for cats."
+          "zhHant": "貓寧願食肉，玉米不是貓的首選。",
+          "en": "Cats would rather have meat — so corn is not a cat favourite."
         }
       ],
       "correctAnswer": "dog",
       "explanation": {
-        "zhHant": "離芯、沒有調味的清煮玉米粒，大人同意時可以當狗的點心。玉米芯本身對狗和貓都危險——會塞住腸道。貓不需要玉米，所以這張卡把它算作狗點心；玉米本身不是毒藥。",
-        "en": "Plain cooked kernels off the cob can be a snack idea for dogs when a grown-up agrees. The cob itself is dangerous for dogs and cats — it can block the gut. Cats do not need corn, so this card calls it a dog snack; corn is not a poison."
+        "zhHant": "離芯冇調味嘅清煮玉米粒，大人話得可以當狗嘅點心。玉米芯本身對狗同貓都危險——會塞住腸道。貓寧願食肉。",
+        "en": "Plain cooked kernels off the cob are a good snack for dogs when a grown-up agrees. The cob itself is dangerous for dogs and cats — it can block the gut. Cats would rather have meat."
       },
       "sourceIds": [
         "fda-pets",
@@ -535,7 +535,7 @@
         "en": "Peeled green kiwi fruit cut in half"
       },
       "preparation": {
-        "zhHant": "新鮮奇異果，已去皮切塊，沒有糖。",
+        "zhHant": "新鮮奇異果，已去皮切塊，冇糖。",
         "en": "Fresh kiwi, peeled and cut, no sugar added."
       },
       "clues": [
@@ -548,14 +548,14 @@
           "en": "Dogs can sometimes share a little plain kiwi."
         },
         {
-          "zhHant": "貓通常不需要這種水果。",
+          "zhHant": "貓通常不需要呢種水果。",
           "en": "Cats usually do not need this kind of fruit."
         }
       ],
       "correctAnswer": "dog",
       "explanation": {
-        "zhHant": "去皮原味奇異果，大人同意時可以當狗的點心。貓不需要水果，所以這張卡把它算作狗點心——奇異果本身不是毒藥。這不是份量指引。",
-        "en": "Peeled plain kiwi can be a snack idea for dogs when a grown-up agrees. Cats do not need fruit, so this card calls it a dog snack — kiwi is not a poison. This is not a portion guide."
+        "zhHant": "去皮嘅原味奇異果，大人話得可以當狗嘅點心。貓寧願食肉。",
+        "en": "Peeled plain kiwi is a good snack for dogs when a grown-up agrees. Cats would rather have meat."
       },
       "sourceIds": [
         "fda-pets",
@@ -571,31 +571,31 @@
       },
       "image": "foods/avocado.jpg",
       "imageAlt": {
-        "zhHant": "整個牛油果和切開見核的半顆",
+        "zhHant": "整個牛油果同切開見核的半顆",
         "en": "A whole avocado and a cut half with the pit"
       },
       "preparation": {
-        "zhHant": "新鮮牛油果，連皮和果核一起在盤上。",
+        "zhHant": "新鮮牛油果，連皮同果核一起在盤上。",
         "en": "Fresh avocado on a plate, including skin and pit nearby."
       },
       "clues": [
         {
-          "zhHant": "對狗和貓來說，牛油果只是輕微腸胃不適。",
+          "zhHant": "對狗同貓來說，牛油果只是輕微腸胃不適。",
           "en": "For dogs and cats, avocado is only mildly upsetting."
         },
         {
-          "zhHant": "危險的是果核和果皮——可以塞住腸道。",
+          "zhHant": "危險的是果核同果皮——可以塞住腸道。",
           "en": "The danger is the pit and skin — they can block the gut."
         },
         {
-          "zhHant": "這不是寵物點心——先問大人。",
+          "zhHant": "呢不是寵物點心——先問大人。",
           "en": "This is not a pet treat — ask a grown-up."
         }
       ],
       "correctAnswer": "neither",
       "explanation": {
-        "zhHant": "牛油果不是寵物點心。對狗和貓來說只會輕微腸胃不舒服，但果核和果皮可以塞住腸道——所以寵物要遠離牛油果，並且要告訴大人。",
-        "en": "Avocado is not a pet treat. For dogs and cats it is only mildly upsetting, but the pit and skin can block the gut — so keep it away from pets and tell a grown-up."
+        "zhHant": "牛油果唔係毛孩點心。對狗同貓只會輕微腸胃唔舒服，但果核同果皮可以塞住腸道——唔好畀毛孩掂到，同話畀大人知。",
+        "en": "Avocado is not a pet treat. For dogs and cats it is only mildly upsetting, but the pit and skin can block the gut — keep it away from pets and tell a grown-up."
       },
       "sourceIds": [
         "aspca-toxic",

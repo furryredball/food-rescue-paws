@@ -2,7 +2,6 @@ import { useId, useState } from 'react'
 import { settings } from '../config/settings'
 import { ui } from '../i18n/ui'
 import { BiText } from './BiText'
-
 interface AdultInfoPanelProps {
   onOpenAssetPreview?: () => void
 }
@@ -26,19 +25,8 @@ export function AdultInfoPanel({ onOpenAssetPreview }: AdultInfoPanelProps) {
       {open ? (
         <div id={panelId} className="adult-info__panel">
           <BiText copy={ui.safetyNotes} as="h2" />
+          <BiText copy={ui.adultPanelBody} as="p" />
           <ul>
-            <li>
-              <BiText copy={ui.safety1} as="span" />
-            </li>
-            <li>
-              <BiText copy={ui.safety2} as="span" />
-            </li>
-            <li>
-              <BiText copy={ui.safety3} as="span" />
-            </li>
-            <li>
-              <BiText copy={ui.safety4} as="span" />
-            </li>
             <li>
               <BiText copy={ui.safety5} as="span" />
             </li>

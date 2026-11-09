@@ -33,7 +33,7 @@
     "en": "Miso the cat"
   },
   "howToPlay": {
-    "zhHant": "怎麼玩",
+    "zhHant": "點玩",
     "en": "How to play"
   },
   "instructionsTitle": {
@@ -49,7 +49,7 @@
     "en": "Tap optional clues if you want a hint."
   },
   "instruction3": {
-    "zhHant": "選擇可能適合誰：狗點心、貓點心、兩者都可以、兩者都不行，或先問大人。",
+    "zhHant": "選擇可能適合邊個：狗點心、貓點心、狗同貓都得、狗同貓都唔得，或先問大人。",
     "en": "Choose who it might suit: Dog snack, Cat snack, Both, Neither, or Ask a grown-up."
   },
   "instruction4": {
@@ -81,7 +81,7 @@
     "en": "Draft"
   },
   "preparation": {
-    "zhHant": "製作方式",
+    "zhHant": "點樣整",
     "en": "Preparation"
   },
   "attemptNote": {
@@ -89,11 +89,11 @@
     "en": "Take another careful look — you have one more try."
   },
   "needClue": {
-    "zhHant": "需要提示嗎？",
+    "zhHant": "要唔要貼士？",
     "en": "Need a clue?"
   },
   "clueN": {
-    "zhHant": "提示 {n}",
+    "zhHant": "貼士 {n}",
     "en": "Clue {n}"
   },
   "paws": {
@@ -105,7 +105,7 @@
     "en": "{earned} of {total} paws earned"
   },
   "answerGroupAria": {
-    "zhHant": "這食物可能適合誰？",
+    "zhHant": "呢樣嘢，邊個食得？",
     "en": "Who could this food be for?"
   },
   "cluesGroupAria": {
@@ -113,7 +113,7 @@
     "en": "Optional clues"
   },
   "feedbackCorrect": {
-    "zhHant": "答對了",
+    "zhHant": "啱喇！",
     "en": "Correct"
   },
   "feedbackShown": {
@@ -133,19 +133,19 @@
     "en": "Almost — look again"
   },
   "feedbackLearn": {
-    "zhHant": "一起來學",
+    "zhHant": "一齊睇下",
     "en": "Let’s learn together"
   },
   "feedbackRetryBody": {
-    "zhHant": "這個選擇和食物細節不太吻合。再看看製作方式和提示，然後再試一次。",
+    "zhHant": "呢個選擇，同張相唔太夾。睇下點樣整同啲貼士，再試一次。",
     "en": "That choice does not match this food’s details. Check the preparation and clues, then try once more."
   },
   "helpfulAnswerIs": {
-    "zhHant": "有幫助的答案是：{answerZh}。",
-    "en": "The helpful answer is {answerEn}."
+    "zhHant": "我哋嘅答案係：{answerZh}.",
+    "en": "Our answer is {answerEn}."
   },
   "youChose": {
-    "zhHant": "你選了：{answerZh}",
+    "zhHant": "你揀咗：{answerZh}",
     "en": "You chose: {answerEn}"
   },
   "next": {
@@ -157,7 +157,7 @@
     "en": "Try again"
   },
   "youDidIt": {
-    "zhHant": "完成了",
+    "zhHant": "搞掂！",
     "en": "You did it"
   },
   "badgeEarned": {
@@ -177,12 +177,12 @@
     "en": "Play again →"
   },
   "stillPlaying": {
-    "zhHant": "還在玩嗎？",
+    "zhHant": "仲玩緊呀？",
     "en": "Still playing?"
   },
   "inactivityDesc": {
-    "zhHant": "遊戲將在 {seconds} 秒後重新開始，方便下一位訪客遊玩。",
-    "en": "This game will restart in {seconds} seconds so the next visitor can play."
+    "zhHant": "仲有 {seconds} 秒，我哋就讓個位畀你。下一位小朋友都想玩！",
+    "en": "In {seconds} seconds we’ll hand the seat to the next kid."
   },
   "continue": {
     "zhHant": "繼續",
@@ -195,30 +195,6 @@
   "safetyNotes": {
     "zhHant": "安全說明",
     "en": "Safety notes"
-  },
-  "safety1": {
-    "zhHant": "這是給 6–9 歲的教育檢查遊戲，不是獸醫建議。",
-    "en": "This is an educational inspection game for ages 6–9, not veterinary advice."
-  },
-  "safety2": {
-    "zhHant": "真正把食物給寵物前，一定要先問大人。",
-    "en": "Always ask a grown-up before offering any food to a real pet."
-  },
-  "safety3": {
-    "zhHant": "精選的消費前剩餘食物（尚未使用、仍安全的食物）和盤中剩菜或腐壞食物不同。",
-    "en": "Selected pre-consumer surplus (unused, still-safe food) is different from plate scraps or spoiled food."
-  },
-  "safety4": {
-    "zhHant": "所有卡片的內容都已核對公開的寵物安全指引（ASPCA、FDA），並不是獸醫審核。",
-    "en": "All cards were checked against published pet-safety guidance (ASPCA, FDA). This is not veterinary review."
-  },
-  "sourcesHeading": {
-    "zhHant": "資料來源",
-    "en": "Sources"
-  },
-  "sourcesHint": {
-    "zhHant": "遊戲中只以文字顯示網址。請在遊戲結束後用其他裝置開啟。",
-    "en": "URLs are listed as text only during play. Open them on a separate device after the session."
   },
   "openAssetPreview": {
     "zhHant": "開啟素材預覽",
@@ -274,11 +250,11 @@
       "en": "Cat snack"
     },
     "both": {
-      "zhHant": "兩者都可以",
-      "en": "Both"
+      "zhHant": "狗同貓都得",
+      "en": "Both okay"
     },
     "neither": {
-      "zhHant": "兩者都不行",
+      "zhHant": "狗同貓都唔得",
       "en": "Neither"
     },
     "ask-grown-up": {
@@ -293,5 +269,9 @@
   "dogSnackLegend": {
     "zhHant": "「狗點心」代表這食物適合做狗的小食，不代表貓吃了會中毒。",
     "en": "“Dog snack” means the food suits a dog as a treat. It does not mean it is poison for a cat."
+  },
+  "adultPanelBody": {
+    "zhHant": "呢個遊戲，只教一個習慣：餵之前，先問大人。遊戲入面嘅食物，係廚房或街市未用過、仲安全嘅剩餘食物，同食剩嘅餸、壞咗嘅食物唔同。答案由我哋根據 ASPCA 同 FDA 嘅公開指引整理，唔係獸醫建議，亦都唔會教你餵幾多。同小朋友坐低一齊讀，就係最好嘅玩法。",
+    "en": "This game teaches one habit: ask a grown-up before feeding a pet. The foods in it are unused, still-safe surplus from kitchens and markets — not plate scraps, and not spoiled food. Our answers are put together from public guidance by the ASPCA and the FDA. It is not veterinary advice, and it will not tell you how much to feed. Sit down and read it together — that is the whole game."
   }
 }

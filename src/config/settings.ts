@@ -7,10 +7,10 @@ export const settings = {
   sessionCardCount: 6,
 
   /** Seconds of inactivity before the reset warning appears. */
-  inactivityTimeoutSeconds: 90,
+  inactivityTimeoutSeconds: 150,
 
   /** Seconds shown on the reset warning before auto-reset. */
-  resetWarningSeconds: 10,
+  resetWarningSeconds: 30,
 
   /** Master sound toggle (still requires a player gesture to play). */
   soundEnabled: true,

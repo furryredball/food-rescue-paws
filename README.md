@@ -2,7 +2,7 @@
 
 A short, touch-friendly educational web game for children ages 6–9. Players inspect rescued food with dog and cat guides, choose who it might be for, and always get reminded to ask a grown-up before feeding a real pet.
 
-**Bilingual exhibition UI:** Traditional Chinese (`zh-Hant`) and English are shown together on every screen. Edit UI strings in `src/i18n/ui.ts` and food copy in `src/data/foods.ts` (`{ zhHant, en }`).
+**Bilingual exhibition UI:** Traditional Chinese (`zh-Hant`) and English are shown together. **Edit text directly** in the JSON files under `src/content/` (`ui.json`, `foods.json`, `sources.json`) — see `src/content/README.md`.
 
 Built with React, TypeScript, Vite and plain CSS. No backend, accounts, analytics or paid services.
 

@@ -1,0 +1,326 @@
+{
+  "_comment": "Edit food card text here. correctAnswer must be one of: dog, cat, both, neither, ask-grown-up. image path is under public/assets/.",
+  "foods": [
+    {
+      "id": "plain-cooked-chicken",
+      "title": {
+        "zhHant": "清煮雞肉",
+        "en": "Plain cooked chicken"
+      },
+      "image": "foods/plain-cooked-chicken.svg",
+      "imageAlt": {
+        "zhHant": "乾淨盤子上的清煮雞胸肉塊",
+        "en": "Pieces of plain cooked chicken breast on a clean plate"
+      },
+      "preparation": {
+        "zhHant": "完全煮熟，沒有骨頭、沒有皮、沒有調味、沒有醬汁，已放涼且新鮮。",
+        "en": "Fully cooked, no bones, no skin, no seasoning, no sauce, still cool and fresh."
+      },
+      "clues": [
+        {
+          "zhHant": "骨頭可能會傷害寵物。",
+          "en": "Bones can hurt pets."
+        },
+        {
+          "zhHant": "鹽、洋蔥和大蒜醬料並不安全。",
+          "en": "Salt, onion and garlic sauces are not safe."
+        },
+        {
+          "zhHant": "大人同意時，狗和貓都可以分享清煮的肉。",
+          "en": "Both dogs and cats can share plain cooked meat when a grown-up says yes."
+        }
+      ],
+      "correctAnswer": "both",
+      "explanation": {
+        "zhHant": "沒有骨頭、沒有調味的清煮雞肉，狗和貓都可能可以吃——但一定要先問大人。這個遊戲不會決定真正的餐點。",
+        "en": "Plain cooked chicken without bones or seasoning can be okay for dogs and cats — but only if a grown-up checks first. This game never decides a real meal."
+      },
+      "sourceIds": [
+        "aspca-toxic",
+        "fda-pets",
+        "exhibition-note"
+      ],
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "raw-onion",
+      "title": {
+        "zhHant": "生洋蔥",
+        "en": "Raw onion"
+      },
+      "image": "foods/raw-onion.svg",
+      "imageAlt": {
+        "zhHant": "一顆生洋蔥和切好的洋蔥塊",
+        "en": "A whole raw onion and chopped onion pieces"
+      },
+      "preparation": {
+        "zhHant": "生的、切碎的，沒有烹調，也沒有和其他材料混合。",
+        "en": "Raw, chopped, no cooking, no other ingredients mixed in."
+      },
+      "clues": [
+        {
+          "zhHant": "洋蔥可能會讓寵物很不舒服。",
+          "en": "Onions can make pets feel very sick."
+        },
+        {
+          "zhHant": "剩菜裡就算煮過的洋蔥也有問題。",
+          "en": "Even cooked onion in leftovers is a problem."
+        },
+        {
+          "zhHant": "這不是狗或貓的點心。",
+          "en": "This is not a treat for dogs or cats."
+        }
+      ],
+      "correctAnswer": "neither",
+      "explanation": {
+        "zhHant": "洋蔥對狗和貓都不安全。請放在一旁並告訴大人——千萬不要把洋蔥給寵物。",
+        "en": "Onion is not safe for dogs or cats. Put it aside and tell a grown-up — never offer onion to a pet."
+      },
+      "sourceIds": [
+        "aspca-toxic",
+        "fda-pets"
+      ],
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "plain-cooked-carrot",
+      "title": {
+        "zhHant": "清煮胡蘿蔔",
+        "en": "Plain cooked carrot"
+      },
+      "image": "foods/plain-cooked-carrot.svg",
+      "imageAlt": {
+        "zhHant": "沒有調味的軟熟胡蘿蔔片",
+        "en": "Soft cooked carrot slices without seasoning"
+      },
+      "preparation": {
+        "zhHant": "蒸至軟熟後放涼，沒有牛油、沒有鹽、沒有蜜糖釉。",
+        "en": "Steamed until soft, cooled, no butter, no salt, no honey glaze."
+      },
+      "clues": [
+        {
+          "zhHant": "軟軟的小塊比較好咬。",
+          "en": "Soft pieces are easier to chew."
+        },
+        {
+          "zhHant": "狗常常喜歡清淡的胡蘿蔔。",
+          "en": "Dogs often enjoy plain carrot."
+        },
+        {
+          "zhHant": "貓通常比較喜歡肉類食物，胡蘿蔔不是貓的首選。",
+          "en": "Cats usually prefer meaty foods, so carrot is not a cat favourite."
+        }
+      ],
+      "correctAnswer": "dog",
+      "explanation": {
+        "zhHant": "大人同意時，清煮胡蘿蔔可以當狗的脆脆或軟軟點心想法。對貓來說不是有用的食物選擇。",
+        "en": "Plain cooked carrot can be a crunchy or soft snack idea for dogs when a grown-up agrees. It is not a useful food choice for cats."
+      },
+      "sourceIds": [
+        "fda-pets",
+        "exhibition-note"
+      ],
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "grape-cluster",
+      "title": {
+        "zhHant": "葡萄",
+        "en": "Grapes"
+      },
+      "image": "foods/grape-cluster.svg",
+      "imageAlt": {
+        "zhHant": "一小串新鮮紫葡萄",
+        "en": "A small cluster of fresh purple grapes"
+      },
+      "preparation": {
+        "zhHant": "新鮮整顆葡萄，已清洗，尚未去梗。",
+        "en": "Fresh whole grapes, washed, no stems removed yet."
+      },
+      "clues": [
+        {
+          "zhHant": "葡萄和提子乾可能對狗很危險。",
+          "en": "Grapes and raisins can be dangerous for dogs."
+        },
+        {
+          "zhHant": "貓也不應該吃葡萄。",
+          "en": "Cats should not eat grapes either."
+        },
+        {
+          "zhHant": "如果在寵物碗附近看到葡萄，立刻問大人。",
+          "en": "If you see grapes near pet bowls, ask a grown-up right away."
+        }
+      ],
+      "correctAnswer": "neither",
+      "explanation": {
+        "zhHant": "葡萄對狗和貓都不安全。請離寵物遠一點，並請大人幫忙。",
+        "en": "Grapes are not safe for dogs or cats. Keep them away from pets and ask a grown-up for help."
+      },
+      "sourceIds": [
+        "aspca-toxic",
+        "fda-pets"
+      ],
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "mystery-leftover-bowl",
+      "title": {
+        "zhHant": "神秘剩菜碗",
+        "en": "Mystery leftover bowl"
+      },
+      "image": "foods/mystery-leftover-bowl.svg",
+      "imageAlt": {
+        "zhHant": "一碗蓋著的混合剩菜，成分不明",
+        "en": "A covered bowl of mixed leftovers with unknown ingredients"
+      },
+      "preparation": {
+        "zhHant": "蓋著的混合剩菜。標籤缺失。氣味和成分都不清楚。",
+        "en": "Covered mixed leftovers. Label is missing. Smell and ingredients are unknown."
+      },
+      "clues": [
+        {
+          "zhHant": "我們看不到每樣材料。",
+          "en": "We cannot see every ingredient."
+        },
+        {
+          "zhHant": "盤中剩菜可能有洋蔥、鹽或醬汁。",
+          "en": "Plate scraps may include onion, salt or sauce."
+        },
+        {
+          "zhHant": "資料不足時，要先問大人。",
+          "en": "When information is missing, ask a grown-up."
+        }
+      ],
+      "correctAnswer": "ask-grown-up",
+      "explanation": {
+        "zhHant": "重要細節缺失，所以安全答案是「先問大人」。精選消費前剩餘食物和盤中剩菜或腐壞食物不同——不要猜。",
+        "en": "Important details are missing, so the safe answer is Ask a grown-up. Selected pre-consumer surplus is different from plate scraps or spoiled food — never guess."
+      },
+      "sourceIds": [
+        "exhibition-note",
+        "fda-pets"
+      ],
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "plain-cooked-fish",
+      "title": {
+        "zhHant": "清煮魚肉",
+        "en": "Plain cooked fish"
+      },
+      "image": "foods/plain-cooked-fish.svg",
+      "imageAlt": {
+        "zhHant": "去骨後的清煮白魚肉片",
+        "en": "Flaked plain cooked white fish without bones"
+      },
+      "preparation": {
+        "zhHant": "完全煮熟，仔細去骨，沒有油、沒有檸檬牛油，已放涼。",
+        "en": "Fully cooked, carefully deboned, no oil, no lemon butter, cooled."
+      },
+      "clues": [
+        {
+          "zhHant": "一定要去掉骨頭。",
+          "en": "Bones must be removed."
+        },
+        {
+          "zhHant": "大人同意時，清淡魚肉可能適合貓和狗。",
+          "en": "Plain fish can suit cats and dogs when a grown-up approves."
+        },
+        {
+          "zhHant": "餐廳調味魚和清煮魚不一樣。",
+          "en": "Seasoned restaurant fish is not the same as plain fish."
+        }
+      ],
+      "correctAnswer": "both",
+      "explanation": {
+        "zhHant": "大人檢查後，去骨的清煮魚可能適合狗和貓。這不是食譜或份量指引。",
+        "en": "Plain, boneless cooked fish can be okay for dogs and cats after a grown-up checks. This is not a recipe or portion guide."
+      },
+      "sourceIds": [
+        "fda-pets",
+        "exhibition-note"
+      ],
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "chocolate-brownie",
+      "title": {
+        "zhHant": "朱古力布朗尼",
+        "en": "Chocolate brownie"
+      },
+      "image": "foods/chocolate-brownie.svg",
+      "imageAlt": {
+        "zhHant": "餐巾上的一塊朱古力布朗尼",
+        "en": "A square chocolate brownie on a napkin"
+      },
+      "preparation": {
+        "zhHant": "烤焗朱古力甜品，有糖、可可和牛油。",
+        "en": "Baked chocolate dessert with sugar, cocoa and butter."
+      },
+      "clues": [
+        {
+          "zhHant": "朱古力可能讓寵物病得很重。",
+          "en": "Chocolate can make pets very ill."
+        },
+        {
+          "zhHant": "甜品是人吃的，不是寵物食物。",
+          "en": "Sweet desserts are people food, not pet food."
+        },
+        {
+          "zhHant": "即使一小塊也應該留給人。",
+          "en": "Even a small piece should stay with people."
+        }
+      ],
+      "correctAnswer": "neither",
+      "explanation": {
+        "zhHant": "朱古力對狗和貓都不安全。把布朗尼留給人，如果寵物可能吃了，要告訴大人。",
+        "en": "Chocolate is not safe for dogs or cats. Save the brownie for people and tell a grown-up if a pet might have eaten some."
+      },
+      "sourceIds": [
+        "aspca-toxic",
+        "fda-pets"
+      ],
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "canned-tuna-unknown",
+      "title": {
+        "zhHant": "打開的吞拿魚罐頭",
+        "en": "Open tuna tin"
+      },
+      "image": "foods/canned-tuna-unknown.svg",
+      "imageAlt": {
+        "zhHant": "打開的吞拿魚罐頭，標籤看不清",
+        "en": "An open tin of tuna with an unreadable label"
+      },
+      "preparation": {
+        "zhHant": "已打開的罐頭。標籤撕破。不知道是浸水、浸油還是調味醬。",
+        "en": "Open tin. Label torn. Unknown if packed in water, oil or flavoured sauce."
+      },
+      "clues": [
+        {
+          "zhHant": "油和調味醬會改變是否安全。",
+          "en": "Oil and flavoured sauces change what is safe."
+        },
+        {
+          "zhHant": "我們看不到完整標籤。",
+          "en": "We cannot read the full label."
+        },
+        {
+          "zhHant": "資料不足就要先問大人。",
+          "en": "Missing information means ask a grown-up."
+        }
+      ],
+      "correctAnswer": "ask-grown-up",
+      "explanation": {
+        "zhHant": "因為浸泡液體和調味不明，決定前先問大人。不要自己用不明罐頭餵寵物。",
+        "en": "Because the packing liquid and seasonings are unknown, ask a grown-up before deciding. Never feed from an unknown tin on your own."
+      },
+      "sourceIds": [
+        "exhibition-note",
+        "fda-pets"
+      ],
+      "reviewStatus": "draft"
+    }
+  ]
+}

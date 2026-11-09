@@ -1,0 +1,289 @@
+{
+  "_comment": "Edit Traditional Chinese (zhHant) and English (en) here. Use {count}, {n}, {total}, {earned}, {paws}, {seconds}, {answer} where shown.",
+  "brandName": {
+    "zhHant": "食物救援爪爪",
+    "en": "Food Rescue Paws"
+  },
+  "welcomeLede": {
+    "zhHant": "和狗狗 Pip、貓咪 Miso 一起檢查回收食物——真正餵寵物前，一定要先問大人。",
+    "en": "Help Pip the dog and Miso the cat inspect rescued food — then always ask a grown-up before feeding a real pet."
+  },
+  "stickerAskGrownUp": {
+    "zhHant": "先問大人",
+    "en": "Ask a grown-up"
+  },
+  "stickerSixFoods": {
+    "zhHant": "6 種食物",
+    "en": "6 foods"
+  },
+  "stickerSessionTime": {
+    "zhHant": "約 2–3 分鐘",
+    "en": "2–3 min"
+  },
+  "startInspecting": {
+    "zhHant": "開始檢查 →",
+    "en": "Start inspecting →"
+  },
+  "pipDog": {
+    "zhHant": "狗狗 Pip",
+    "en": "Pip the dog"
+  },
+  "misoCat": {
+    "zhHant": "貓咪 Miso",
+    "en": "Miso the cat"
+  },
+  "howToPlay": {
+    "zhHant": "怎麼玩",
+    "en": "How to play"
+  },
+  "instructionsTitle": {
+    "zhHant": "仔細看，再小心選。",
+    "en": "Look closely. Choose carefully."
+  },
+  "instruction1": {
+    "zhHant": "看看食物照片、名稱和製作說明。",
+    "en": "Look at the food photo, name and preparation details."
+  },
+  "instruction2": {
+    "zhHant": "需要時可以點提示。",
+    "en": "Tap optional clues if you want a hint."
+  },
+  "instruction3": {
+    "zhHant": "選擇可能適合誰：狗、貓、兩者都可以、兩者都不行，或先問大人。",
+    "en": "Choose who it might be for: Dog, Cat, Both, Neither, or Ask a grown-up."
+  },
+  "instruction4": {
+    "zhHant": "完成 {count} 種食物各得一隻爪印。第一次答錯還可以再試一次。",
+    "en": "Earn one paw for each of {count} foods you finish. You can try again if your first guess needs another look."
+  },
+  "reminderAskGrownUp": {
+    "zhHant": "提醒：真正餵寵物前，一定要先問大人。",
+    "en": "Reminder: always ask a grown-up before offering food to a real pet."
+  },
+  "reminderCompact": {
+    "zhHant": "真正餵寵物前，一定要先問大人。",
+    "en": "Always ask a grown-up before feeding a real pet."
+  },
+  "back": {
+    "zhHant": "返回",
+    "en": "Back"
+  },
+  "letsGo": {
+    "zhHant": "開始吧 →",
+    "en": "Let’s go →"
+  },
+  "foodProgress": {
+    "zhHant": "食物 {n}/{total}",
+    "en": "Food {n}/{total}"
+  },
+  "draft": {
+    "zhHant": "草稿",
+    "en": "Draft"
+  },
+  "preparation": {
+    "zhHant": "製作方式",
+    "en": "Preparation"
+  },
+  "attemptNote": {
+    "zhHant": "再仔細看看——你還有一次機會。",
+    "en": "Take another careful look — you have one more try."
+  },
+  "needClue": {
+    "zhHant": "需要提示嗎？",
+    "en": "Need a clue?"
+  },
+  "clueN": {
+    "zhHant": "提示 {n}",
+    "en": "Clue {n}"
+  },
+  "paws": {
+    "zhHant": "爪印",
+    "en": "Paws"
+  },
+  "pawsAria": {
+    "zhHant": "已獲得 {earned} / {total} 隻爪印",
+    "en": "{earned} of {total} paws earned"
+  },
+  "answerGroupAria": {
+    "zhHant": "這食物可能適合誰？",
+    "en": "Who could this food be for?"
+  },
+  "cluesGroupAria": {
+    "zhHant": "可選提示",
+    "en": "Optional clues"
+  },
+  "feedbackCorrect": {
+    "zhHant": "答對了",
+    "en": "Correct"
+  },
+  "feedbackShown": {
+    "zhHant": "揭曉答案",
+    "en": "Answer shown"
+  },
+  "feedbackRetry": {
+    "zhHant": "再試一次",
+    "en": "Try again"
+  },
+  "feedbackNice": {
+    "zhHant": "檢查得很棒！",
+    "en": "Nice inspecting!"
+  },
+  "feedbackAlmost": {
+    "zhHant": "差一點——再看看",
+    "en": "Almost — look again"
+  },
+  "feedbackLearn": {
+    "zhHant": "一起來學",
+    "en": "Let’s learn together"
+  },
+  "feedbackRetryBody": {
+    "zhHant": "這個選擇和食物細節不太吻合。再看看製作方式和提示，然後再試一次。",
+    "en": "That choice does not match this food’s details. Check the preparation and clues, then try once more."
+  },
+  "helpfulAnswerIs": {
+    "zhHant": "有幫助的答案是：{answerZh}。",
+    "en": "The helpful answer is {answerEn}."
+  },
+  "youChose": {
+    "zhHant": "你選了：{answerZh}",
+    "en": "You chose: {answerEn}"
+  },
+  "next": {
+    "zhHant": "下一個",
+    "en": "Next"
+  },
+  "tryAgain": {
+    "zhHant": "再試一次",
+    "en": "Try again"
+  },
+  "youDidIt": {
+    "zhHant": "完成了",
+    "en": "You did it"
+  },
+  "badgeEarned": {
+    "zhHant": "獲得食物救援徽章！",
+    "en": "Food Rescue badge earned!"
+  },
+  "badgeLabel": {
+    "zhHant": "食物救援徽章",
+    "en": "Food Rescue badge"
+  },
+  "completionLede": {
+    "zhHant": "你檢查了 {total} 種食物，收集了 {paws} 隻爪印。記住：真正餵寵物前要先問大人。",
+    "en": "You inspected {total} foods and collected {paws} progress paws. Remember: ask a grown-up before feeding a real pet."
+  },
+  "playAgain": {
+    "zhHant": "再玩一次 →",
+    "en": "Play again →"
+  },
+  "stillPlaying": {
+    "zhHant": "還在玩嗎？",
+    "en": "Still playing?"
+  },
+  "inactivityDesc": {
+    "zhHant": "遊戲將在 {seconds} 秒後重新開始，方便下一位訪客遊玩。",
+    "en": "This game will restart in {seconds} seconds so the next visitor can play."
+  },
+  "continue": {
+    "zhHant": "繼續",
+    "en": "Continue"
+  },
+  "adultToggle": {
+    "zhHant": "給大人：安全與資料來源",
+    "en": "Grown-ups: safety & sources"
+  },
+  "safetyNotes": {
+    "zhHant": "安全說明",
+    "en": "Safety notes"
+  },
+  "safety1": {
+    "zhHant": "這是給 6–9 歲的教育檢查遊戲，不是獸醫建議。",
+    "en": "This is an educational inspection game for ages 6–9, not veterinary advice."
+  },
+  "safety2": {
+    "zhHant": "真正把食物給寵物前，一定要先問大人。",
+    "en": "Always ask a grown-up before offering any food to a real pet."
+  },
+  "safety3": {
+    "zhHant": "精選的消費前剩餘食物（尚未使用、仍安全的食物）和盤中剩菜或腐壞食物不同。",
+    "en": "Selected pre-consumer surplus (unused, still-safe food) is different from plate scraps or spoiled food."
+  },
+  "safety4": {
+    "zhHant": "初期卡片標示為草稿，有待合格審核。請勿從本遊戲推導餵食份量或均衡餐食食譜。",
+    "en": "Initial cards are marked draft pending qualified review. Do not invent feeding quantities or balanced-meal recipes from this game."
+  },
+  "sourcesHeading": {
+    "zhHant": "資料來源",
+    "en": "Sources"
+  },
+  "sourcesHint": {
+    "zhHant": "遊戲中只以文字顯示網址。請在遊戲結束後用其他裝置開啟。",
+    "en": "URLs are listed as text only during play. Open them on a separate device after the session."
+  },
+  "openAssetPreview": {
+    "zhHant": "開啟素材預覽",
+    "en": "Open asset preview"
+  },
+  "assetPreviewTitle": {
+    "zhHant": "素材預覽",
+    "en": "Asset preview"
+  },
+  "backToWelcome": {
+    "zhHant": "返回歡迎頁",
+    "en": "Back to welcome"
+  },
+  "assetPreviewLede": {
+    "zhHant": "缺少的檔案會顯示標籤佔位圖，不會出現破圖圖示。請把檔案放到 public/assets/ 並使用相同路徑。",
+    "en": "Missing files show labelled placeholders instead of broken-image icons. Replace files under public/assets/ using the same paths."
+  },
+  "branding": {
+    "zhHant": "品牌",
+    "en": "Branding"
+  },
+  "petGuides": {
+    "zhHant": "寵物嚮導",
+    "en": "Pet guides"
+  },
+  "foodCards": {
+    "zhHant": "食物卡片",
+    "en": "Food cards"
+  },
+  "audioPaths": {
+    "zhHant": "音效路徑",
+    "en": "Audio paths"
+  },
+  "logo": {
+    "zhHant": "標誌",
+    "en": "Logo"
+  },
+  "completionBadge": {
+    "zhHant": "完成徽章",
+    "en": "Completion badge"
+  },
+  "validationFailed": {
+    "zhHant": "資料驗證失敗",
+    "en": "Data validation failed"
+  },
+  "answers": {
+    "dog": {
+      "zhHant": "狗",
+      "en": "Dog"
+    },
+    "cat": {
+      "zhHant": "貓",
+      "en": "Cat"
+    },
+    "both": {
+      "zhHant": "兩者都可以",
+      "en": "Both"
+    },
+    "neither": {
+      "zhHant": "兩者都不行",
+      "en": "Neither"
+    },
+    "ask-grown-up": {
+      "zhHant": "先問大人",
+      "en": "Ask a grown-up"
+    }
+  }
+}

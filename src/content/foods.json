@@ -1,5 +1,5 @@
 {
-  "_comment": "Edit food card text here. correctAnswer must be one of: dog, cat, both, neither, ask-grown-up. image path is under public/assets/.",
+  "_comment": "Edit food card text here. correctAnswer must be one of: dog, cat, both, neither. image path is under public/assets/.",
   "foods": [
     {
       "id": "plain-cooked-chicken",
@@ -187,14 +187,14 @@
           "en": "Plate scraps may include onion, salt or sauce."
         },
         {
-          "zhHant": "睇唔清楚，先問大人。",
-          "en": "When information is missing, ask a grown-up."
+          "zhHant": "睇唔清楚就唔好餵。",
+          "en": "If you cannot tell, do not feed it."
         }
       ],
-      "correctAnswer": "ask-grown-up",
+      "correctAnswer": "neither",
       "explanation": {
-        "zhHant": "碗蓋住咗，我哋睇唔到入面有咩。最安全嘅答案係：問大人。寧願問，好過估。",
-        "en": "We can't tell what's in this bowl, so the safe answer is: ask a grown-up. Better to ask than to guess."
+        "zhHant": "碗蓋住咗，我哋睇唔到入面有咩。唔清楚就唔好餵——揀「狗同貓都唔得」。",
+        "en": "We can't tell what's in this bowl. When it's unclear, don't feed it — choose Neither."
       },
       "sourceIds": [
         "exhibition-note",
@@ -307,14 +307,14 @@
           "en": "We cannot read the full label."
         },
         {
-          "zhHant": "資料不足就要先問大人。",
-          "en": "Missing information means ask a grown-up."
+          "zhHant": "資料不足就唔好餵。",
+          "en": "Missing information means do not feed it."
         }
       ],
-      "correctAnswer": "ask-grown-up",
+      "correctAnswer": "neither",
       "explanation": {
-        "zhHant": "唔知罐入面係水、油定醬汁——餵之前先問大人。",
-        "en": "We can't tell if this tin holds water, oil or sauce — so ask a grown-up before feeding."
+        "zhHant": "唔知罐入面係水、油定醬汁——唔好餵。揀「狗同貓都唔得」。",
+        "en": "We can't tell if this tin holds water, oil or sauce — don't feed it. Choose Neither."
       },
       "sourceIds": [
         "exhibition-note",

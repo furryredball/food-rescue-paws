@@ -41,7 +41,6 @@ export function CompletionScreen({
       />
       <ProgressPaws earned={pawsEarned} total={totalCards} />
       <Speech who="miso" line={ui.misoDone} />
-      <BiText copy={ui.reminderAskGrownUp} as="p" className="reminder" />
       <button
         type="button"
         className="btn btn--primary btn--xl"

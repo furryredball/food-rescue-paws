@@ -62,7 +62,7 @@ export function WelcomeScreen({
         <div className="guide-row">
           <figure className="guide-card">
             <SafeImage
-              path="pets/pip-dog.svg"
+              path="pets/pip-dog.jpg"
               alt={biAria(ui.pipDog)}
               label={biAria(ui.pipDog)}
               className="guide-card__art"
@@ -71,7 +71,7 @@ export function WelcomeScreen({
           </figure>
           <figure className="guide-card">
             <SafeImage
-              path="pets/miso-cat.svg"
+              path="pets/miso-cat.jpg"
               alt={biAria(ui.misoCat)}
               label={biAria(ui.misoCat)}
               className="guide-card__art"

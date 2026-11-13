@@ -32,7 +32,7 @@ npm run lint
 
 Answer choices:
 
-- Dog / Cat / Both / Neither / Ask a grown-up
+- Dog / Cat / Both / Neither
 
 One progress paw is awarded per completed card, even if the player needed a retry.
 

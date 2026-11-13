@@ -18,7 +18,7 @@ export function Speech({ who, line, className }: SpeechProps) {
   return (
     <div className={`speech speech--${who}${className ? ` ${className}` : ''}`}>
       <SafeImage
-        path={who === 'pip' ? 'pets/pip-dog.svg' : 'pets/miso-cat.svg'}
+        path={who === 'pip' ? 'pets/pip-dog.jpg' : 'pets/miso-cat.jpg'}
         alt=""
         label=""
         className="speech__art"

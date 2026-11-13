@@ -15,8 +15,8 @@ const BRANDING = [
 ]
 
 const PETS = [
-  { path: 'pets/pip-dog.svg', label: ui.pipDog },
-  { path: 'pets/miso-cat.svg', label: ui.misoCat },
+  { path: 'pets/pip-dog.jpg', label: ui.pipDog },
+  { path: 'pets/miso-cat.jpg', label: ui.misoCat },
 ]
 
 const AUDIO = [

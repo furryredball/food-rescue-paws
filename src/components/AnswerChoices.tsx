@@ -48,7 +48,5 @@ function symbolFor(value: AnswerValue): string {
       return '雙'
     case 'neither':
       return '否'
-    case 'ask-grown-up':
-      return '?'
   }
 }

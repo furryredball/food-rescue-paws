@@ -9,7 +9,7 @@ describe('bilingual copy', () => {
     expect(isLocaleCopy(ui.brandName)).toBe(true)
     expect(ui.brandName.zhHant).toBe('爪爪救食大作戰')
     expect(ui.brandName.en).toContain('Food Rescue')
-    expect(ANSWER_LABELS['ask-grown-up'].zhHant).toBe('先問大人')
+    expect(ANSWER_LABELS.neither.en).toBe('Neither')
     expect(ANSWER_LABELS.dog.en).toBe('Dog snack')
   })
 

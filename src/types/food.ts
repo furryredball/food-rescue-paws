@@ -6,7 +6,6 @@ export const ANSWER_VALUES = [
   'cat',
   'both',
   'neither',
-  'ask-grown-up',
 ] as const
 
 export type AnswerValue = (typeof ANSWER_VALUES)[number]

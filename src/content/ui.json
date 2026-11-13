@@ -49,16 +49,12 @@
     "en": "Tap optional clues if you want a hint."
   },
   "instruction3": {
-    "zhHant": "選擇可能適合邊個：狗點心、貓點心、狗同貓都得、狗同貓都唔得，或先問大人。",
-    "en": "Choose who it might suit: Dog snack, Cat snack, Both, Neither, or Ask a grown-up."
+    "zhHant": "選擇可能適合邊個：狗點心、貓點心、狗同貓都得，或狗同貓都唔得。",
+    "en": "Choose who it might suit: Dog snack, Cat snack, Both, or Neither."
   },
   "instruction4": {
     "zhHant": "完成 {count} 種食物各得一隻爪印。第一次答錯還可以再試一次。",
     "en": "Earn one paw for each of {count} foods you finish. You can try again if your first guess needs another look."
-  },
-  "reminderAskGrownUp": {
-    "zhHant": "提醒：真正餵寵物前，一定要先問大人。",
-    "en": "Reminder: always ask a grown-up before offering food to a real pet."
   },
   "back": {
     "zhHant": "返回",
@@ -165,8 +161,8 @@
     "en": "Food Rescue badge"
   },
   "completionLede": {
-    "zhHant": "你檢查了 {total} 種食物，收集了 {paws} 隻爪印。記住：真正餵寵物前要先問大人。",
-    "en": "You inspected {total} foods and collected {paws} progress paws. Remember: ask a grown-up before feeding a real pet."
+    "zhHant": "你檢查了 {total} 種食物，收集了 {paws} 隻爪印。Pip 同 Miso 為你proud！",
+    "en": "You inspected {total} foods and collected {paws} progress paws. Pip and Miso are proud of you!"
   },
   "playAgain": {
     "zhHant": "再玩一次 →",
@@ -252,10 +248,6 @@
     "neither": {
       "zhHant": "狗同貓都唔得",
       "en": "Neither"
-    },
-    "ask-grown-up": {
-      "zhHant": "先問大人",
-      "en": "Ask a grown-up"
     }
   },
   "safety5": {

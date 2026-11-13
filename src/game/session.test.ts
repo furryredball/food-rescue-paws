@@ -71,7 +71,6 @@ describe('session length', () => {
     expect(used.has('dog')).toBe(true)
     expect(used.has('both')).toBe(true)
     expect(used.has('neither')).toBe(true)
-    expect(used.has('ask-grown-up')).toBe(true)
   })
 })
 
@@ -115,7 +114,7 @@ describe('scoring and retries', () => {
     const session = createSession(foods)
     const card = getCurrentCard(session)!
     const wrong =
-      card.correctAnswer === 'ask-grown-up' ? 'dog' : ('ask-grown-up' as const)
+      card.correctAnswer === 'neither' ? 'dog' : ('neither' as const)
 
     const first = submitAnswer(session, wrong)
     const second = submitAnswer(first.session, card.correctAnswer)

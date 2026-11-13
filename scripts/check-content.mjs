@@ -19,7 +19,6 @@ const ANSWER_VALUES = new Set([
   'cat',
   'both',
   'neither',
-  'ask-grown-up',
 ])
 const requireReviewed = process.env.REQUIRE_REVIEWED_CONTENT === '1'
 const errors = []

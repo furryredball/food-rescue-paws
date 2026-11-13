@@ -39,7 +39,6 @@ export const ui = {
   instruction2: line('instruction2'),
   instruction3: line('instruction3'),
   instruction4: (count: number) => fill(line('instruction4'), { count }),
-  reminderAskGrownUp: line('reminderAskGrownUp'),
   back: line('back'),
   letsGo: line('letsGo'),
   foodProgress: (n: number, total: number) =>
@@ -110,5 +109,4 @@ export const ANSWER_LABELS: Record<AnswerValue, LocaleCopy> = {
   cat: data.answers.cat,
   both: data.answers.both,
   neither: data.answers.neither,
-  'ask-grown-up': data.answers['ask-grown-up'],
 }

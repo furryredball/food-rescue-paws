@@ -482,17 +482,6 @@ h2 {
   transform: translateY(-1px);
 }
 
-.answer-choices__btn--ask-grown-up {
-  grid-column: 1 / -1;
-  background: var(--orange);
-  color: var(--paper);
-}
-
-.answer-choices__btn--ask-grown-up .answer-choices__symbol {
-  background: var(--paper);
-  color: var(--ink);
-}
-
 .answer-choices__symbol {
   width: 2.2rem;
   height: 2.2rem;
@@ -839,11 +828,7 @@ h2 {
   }
 
   .answer-choices {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-
-  .answer-choices__btn--ask-grown-up {
-    grid-column: auto;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 

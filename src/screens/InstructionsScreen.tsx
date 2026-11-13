@@ -45,7 +45,6 @@ export function InstructionsScreen({
           </li>
         ))}
       </ol>
-      <BiText copy={ui.reminderAskGrownUp} as="p" className="reminder" />
       <div className="btn-row">
         <button type="button" className="btn btn--ghost" onClick={onBack}>
           <BiText copy={ui.back} mode="inline" />

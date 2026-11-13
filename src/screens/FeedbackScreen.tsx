@@ -71,8 +71,6 @@ export function FeedbackScreen({
 
       <Speech who={beat} line={beatLine} />
 
-      <BiText copy={ui.reminderAskGrownUp} as="p" className="reminder" />
-
       <button type="button" className="btn btn--primary" onClick={onContinue}>
         <BiText
           copy={correct || revealed ? ui.next : ui.tryAgain}

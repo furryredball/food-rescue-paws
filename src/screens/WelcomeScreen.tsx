@@ -1,5 +1,6 @@
 import { AdultInfoPanel } from '../components/AdultInfoPanel'
 import { BiText } from '../components/BiText'
+import { foods } from '../data/foods'
 import { biAria } from '../i18n/format'
 import { SafeImage } from '../components/SafeImage'
 import { Speech } from '../components/Speech'
@@ -14,6 +15,10 @@ export function WelcomeScreen({
   onStart,
   onOpenAssetPreview,
 }: WelcomeScreenProps) {
+  const needsReviewBanner = foods.some(
+    (card) => card.reviewStatus !== 'reviewed',
+  )
+
   return (
     <section className="screen screen--welcome" aria-labelledby="welcome-title">
       <div className="brand-lockup">
@@ -32,6 +37,12 @@ export function WelcomeScreen({
       </div>
 
       <BiText copy={ui.welcomeLede} as="p" className="lede" />
+
+      {needsReviewBanner ? (
+        <p className="content-draft-banner" role="status">
+          <BiText copy={ui.contentDraftBanner} as="span" />
+        </p>
+      ) : null}
 
       <div className="speech-row">
         <Speech who="pip" line={ui.pipGreet} />

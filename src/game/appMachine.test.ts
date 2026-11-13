@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest'
 import { foods } from '../data/foods'
 import { settings } from '../config/settings'
-import { createAppState, reduceApp } from './appMachine'
+import { createAppState, inactivityEnabled, reduceApp } from './appMachine'
 import { getCurrentCard } from './session'
 
 describe('app play-flow machine', () => {
@@ -83,5 +83,51 @@ describe('app play-flow machine', () => {
 
     expect(state.phase.status).toBe('completion')
     expect(state.session.pawsEarned).toBe(settings.sessionCardCount)
+  })
+
+  it('ignores a second ANSWER while already on feedback (double-tap)', () => {
+    let state = createAppState(foods)
+    state = reduceApp(state, { type: 'START' }, foods).state
+    state = reduceApp(state, { type: 'BEGIN_INSPECTION' }, foods).state
+    const card = getCurrentCard(state.session)!
+
+    const first = reduceApp(
+      state,
+      { type: 'ANSWER', answer: card.correctAnswer },
+      foods,
+    )
+    expect(first.state.phase.status).toBe('feedback')
+    expect(first.state.session.pawsEarned).toBe(1)
+
+    const second = reduceApp(
+      first.state,
+      { type: 'ANSWER', answer: 'neither' },
+      foods,
+    )
+    expect(second.state).toEqual(first.state)
+    expect(second.state.session.pawsEarned).toBe(1)
+  })
+
+  it('enables inactivity on asset-preview so a kiosk cannot stick there', () => {
+    expect(inactivityEnabled({ status: 'welcome' })).toBe(false)
+    expect(inactivityEnabled({ status: 'asset-preview' })).toBe(true)
+    expect(inactivityEnabled({ status: 'inspection' })).toBe(true)
+  })
+
+  it('ignores FEEDBACK_CONTINUE once the phase has left feedback', () => {
+    let state = createAppState(foods)
+    state = reduceApp(state, { type: 'START' }, foods).state
+    state = reduceApp(state, { type: 'BEGIN_INSPECTION' }, foods).state
+    const card = getCurrentCard(state.session)!
+    state = reduceApp(
+      state,
+      { type: 'ANSWER', answer: card.correctAnswer },
+      foods,
+    ).state
+    state = reduceApp(state, { type: 'FEEDBACK_CONTINUE' }, foods).state
+    expect(state.phase.status).toBe('inspection')
+
+    const duplicate = reduceApp(state, { type: 'FEEDBACK_CONTINUE' }, foods)
+    expect(duplicate.state.phase.status).toBe('inspection')
   })
 })

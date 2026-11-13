@@ -23,7 +23,10 @@ import { ui } from './i18n/ui'
 import { validateFoodCards } from './utils/validation'
 import './App.css'
 
-const validation = validateFoodCards(foods)
+const requireReviewed =
+  import.meta.env.VITE_REQUIRE_REVIEWED === '1' ||
+  import.meta.env.VITE_REQUIRE_REVIEWED === 'true'
+const validation = validateFoodCards(foods, { requireReviewed })
 
 export default function App() {
   const { play, stopAll, unlock } = useAudio(settings.soundEnabled)

@@ -8,6 +8,10 @@
     "zhHant": "和狗狗 Pip、貓咪 Miso 一起檢查回收食物——真正餵寵物前，一定要先問大人。",
     "en": "Help Pip the dog and Miso the cat inspect rescued food — then always ask a grown-up before feeding a real pet."
   },
+  "contentDraftBanner": {
+    "zhHant": "卡片已通過內部 QA，但尚未完成專業審核——這不是獸醫建議，餵寵物前請先問大人。",
+    "en": "Cards are QA-checked but not yet professionally reviewed — this is not veterinary advice. Always ask a grown-up before feeding a pet."
+  },
   "stickerAskGrownUp": {
     "zhHant": "先問大人",
     "en": "Ask a grown-up"

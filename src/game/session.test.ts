@@ -48,6 +48,31 @@ describe('session length', () => {
       true,
     )
   })
+
+  it('runs validateFoodCards on the real foods.json deck (REL-02)', () => {
+    const result = validateFoodCards(foods)
+    expect(result.ok).toBe(true)
+    expect(result.errors).toEqual([])
+  })
+
+  it('fails requireReviewed while cards are not fully reviewed (CONTENT-01)', () => {
+    const result = validateFoodCards(foods, { requireReviewed: true })
+    expect(result.ok).toBe(false)
+    expect(result.errors.some((error) => error.includes('requireReviewed'))).toBe(
+      true,
+    )
+  })
+
+  it('documents which answer values the deck currently exercises (CONTENT-02)', () => {
+    const used = new Set(foods.map((card) => card.correctAnswer))
+    // "cat" is offered in the UI but not yet used as a correctAnswer — intentional
+    // until a qualified reviewer adds a cat-only card.
+    expect(used.has('cat')).toBe(false)
+    expect(used.has('dog')).toBe(true)
+    expect(used.has('both')).toBe(true)
+    expect(used.has('neither')).toBe(true)
+    expect(used.has('ask-grown-up')).toBe(true)
+  })
 })
 
 describe('scoring and retries', () => {

@@ -178,6 +178,16 @@ h2 {
   font-weight: 700;
 }
 
+.content-draft-banner {
+  margin: 0;
+  max-width: 38rem;
+  padding: 0.75rem 1rem;
+  border: 2px solid var(--coral, #e85d4c);
+  background: color-mix(in srgb, var(--coral, #e85d4c) 12%, transparent);
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
 .reminder {
   margin: 0;
   padding: 0.85rem 1rem;

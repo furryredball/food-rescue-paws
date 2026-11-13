@@ -27,6 +27,7 @@ function line(key: keyof UiJson): LocaleCopy {
 export const ui = {
   brandName: line('brandName'),
   welcomeLede: line('welcomeLede'),
+  contentDraftBanner: line('contentDraftBanner'),
   stickerAskGrownUp: line('stickerAskGrownUp'),
   stickerSixFoods: line('stickerSixFoods'),
   stickerSessionTime: line('stickerSessionTime'),

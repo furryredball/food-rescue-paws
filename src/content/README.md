@@ -7,8 +7,7 @@ Open these files in Cursor and change the words directly.
 | File | What it controls |
 | --- | --- |
 | `ui.json` | Buttons, instructions, stickers, feedback, adult panel |
-| `foods.json` | Each food card: title, preparation, clues, explanation, image path |
-| `sources.json` | Grown-up sources list |
+| `foods.json` | Each food card: title, preparation, clues, explanation, image path, reviewStatus |
 
 Every text field looks like:
 

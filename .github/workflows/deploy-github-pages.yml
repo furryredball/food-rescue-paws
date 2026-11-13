@@ -30,11 +30,19 @@ jobs:
       - name: Install
         run: npm ci
 
+      - name: Lint
+        run: npm run lint
+
       - name: Test
         run: npm test
 
+      - name: Content check
+        run: npm run check-content
+
       - name: Build for GitHub Pages subdirectory
         # Public site: https://furryredball.github.io/food-rescue-paws/
+        # Structural check only — drafts/qa-checked still allowed until
+        # a qualified reviewer sets reviewStatus to "reviewed" (build:release).
         env:
           BASE_PATH: /food-rescue-paws/
         run: npm run build

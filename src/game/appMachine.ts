@@ -1,3 +1,4 @@
+import { settings } from '../config/settings'
 import type { AnswerValue, FoodCard, ScreenId } from '../types/food'
 import type { SoundCue } from './sounds'
 import {
@@ -76,8 +77,9 @@ export function screenOf(phase: AppPhase): ScreenId {
   return phase.status
 }
 
+/** Idle reset is off only on welcome so a fresh kiosk stays quiet. */
 export function inactivityEnabled(phase: AppPhase): boolean {
-  return phase.status !== 'welcome' && phase.status !== 'asset-preview'
+  return phase.status !== 'welcome'
 }
 
 export function reduceApp(
@@ -116,6 +118,7 @@ export function reduceApp(
 
     case 'OPEN_ASSET_PREVIEW':
       if (state.phase.status !== 'welcome') return ignore(state)
+      if (!settings.allowAssetPreview) return ignore(state)
       return {
         state: { ...state, phase: { status: 'asset-preview' } },
         unlock: true,

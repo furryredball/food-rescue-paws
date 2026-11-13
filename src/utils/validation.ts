@@ -6,6 +6,14 @@ export interface ValidationResult {
   errors: string[]
 }
 
+export interface ValidateFoodCardsOptions {
+  /**
+   * When true, every card must have reviewStatus "reviewed"
+   * (not merely draft or qa-checked). Use for signed-off releases.
+   */
+  requireReviewed?: boolean
+}
+
 export function isValidAnswer(value: unknown): value is AnswerValue {
   return (
     typeof value === 'string' &&
@@ -14,9 +22,13 @@ export function isValidAnswer(value: unknown): value is AnswerValue {
 }
 
 /** Validate unique IDs, bilingual fields, and allowed answer values. */
-export function validateFoodCards(cards: FoodCard[]): ValidationResult {
+export function validateFoodCards(
+  cards: FoodCard[],
+  options: ValidateFoodCardsOptions = {},
+): ValidationResult {
   const errors: string[] = []
   const seen = new Set<string>()
+  const { requireReviewed = false } = options
 
   for (const card of cards) {
     if (!card.id.trim()) {
@@ -32,6 +44,12 @@ export function validateFoodCards(cards: FoodCard[]): ValidationResult {
     if (!isValidAnswer(card.correctAnswer)) {
       errors.push(
         `Card "${card.id}" has invalid correctAnswer: "${String(card.correctAnswer)}".`,
+      )
+    }
+
+    if (requireReviewed && card.reviewStatus !== 'reviewed') {
+      errors.push(
+        `Card "${card.id}" is "${card.reviewStatus}" — requireReviewed builds need reviewStatus "reviewed".`,
       )
     }
 

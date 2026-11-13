@@ -3,7 +3,6 @@ import { BiText } from '../components/BiText'
 import { foods } from '../data/foods'
 import { biAria } from '../i18n/format'
 import { SafeImage } from '../components/SafeImage'
-import { Speech } from '../components/Speech'
 import { ui } from '../i18n/ui'
 
 interface WelcomeScreenProps {
@@ -44,18 +43,8 @@ export function WelcomeScreen({
         </p>
       ) : null}
 
-      <div className="speech-row">
-        <Speech who="pip" line={ui.pipGreet} />
-      </div>
-
       <div className="hero-stage">
         <div className="hero-stage__stickers" aria-hidden="true">
-          <BiText
-            copy={ui.stickerAskGrownUp}
-            as="span"
-            className="sticker sticker--coral"
-            mode="inline"
-          />
           <BiText
             copy={ui.stickerSixFoods}
             as="span"

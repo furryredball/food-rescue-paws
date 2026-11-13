@@ -352,10 +352,11 @@ h2 {
 .guide-card__art,
 .guide-card .safe-image-placeholder {
   width: min(150px, 34vw);
-  height: min(150px, 34vw);
-  border-radius: 50%;
+  height: min(198px, 45vw);
+  border-radius: 1rem;
   background: var(--cream);
   border: var(--border);
+  object-fit: cover;
 }
 
 .guide-card figcaption {
@@ -876,9 +877,12 @@ h2 {
 }
 
 .speech__art {
-  width: 44px;
-  height: 44px;
+  width: 48px;
+  height: 64px;
   flex: 0 0 auto;
+  border-radius: 0.55rem;
+  object-fit: cover;
+  border: 2px solid var(--line);
 }
 
 .speech__bubble {

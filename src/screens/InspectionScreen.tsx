@@ -96,12 +96,6 @@ export function InspectionScreen({
             as="p"
             className="answer-legend"
           />
-
-          <BiText
-            copy={ui.reminderCompact}
-            as="p"
-            className="reminder reminder--compact"
-          />
         </div>
       </div>
     </section>

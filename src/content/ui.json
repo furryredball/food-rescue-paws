@@ -12,10 +12,6 @@
     "zhHant": "卡片已通過內部 QA，但尚未完成專業審核——這不是獸醫建議，餵寵物前請先問大人。",
     "en": "Cards are QA-checked but not yet professionally reviewed — this is not veterinary advice. Always ask a grown-up before feeding a pet."
   },
-  "stickerAskGrownUp": {
-    "zhHant": "先問大人",
-    "en": "Ask a grown-up"
-  },
   "stickerSixFoods": {
     "zhHant": "6 種食物",
     "en": "6 foods"
@@ -63,10 +59,6 @@
   "reminderAskGrownUp": {
     "zhHant": "提醒：真正餵寵物前，一定要先問大人。",
     "en": "Reminder: always ask a grown-up before offering food to a real pet."
-  },
-  "reminderCompact": {
-    "zhHant": "真正餵寵物前，一定要先問大人。",
-    "en": "Always ask a grown-up before feeding a real pet."
   },
   "back": {
     "zhHant": "返回",
@@ -277,10 +269,6 @@
   "adultPanelBody": {
     "zhHant": "呢個遊戲，只教一個習慣：餵之前，先問大人。遊戲入面嘅食物，係廚房或街市未用過、仲安全嘅剩餘食物，同食剩嘅餸、壞咗嘅食物唔同。答案由我哋根據 ASPCA 同 FDA 嘅公開指引整理，唔係獸醫建議，亦都唔會教你餵幾多。同小朋友坐低一齊讀，就係最好嘅玩法。",
     "en": "This game teaches one habit: ask a grown-up before feeding a pet. The foods in it are unused, still-safe surplus from kitchens and markets — not plate scraps, and not spoiled food. Our answers are put together from public guidance by the ASPCA and the FDA. It is not veterinary advice, and it will not tell you how much to feed. Sit down and read it together — that is the whole game."
-  },
-  "pipGreet": {
-    "zhHant": "我係 Pip。我個鼻好忙，負責聞。",
-    "en": "I'm Pip. My nose does most of my thinking."
   },
   "pipRetry": {
     "zhHant": "唔緊要，我第一次都揀錯。",

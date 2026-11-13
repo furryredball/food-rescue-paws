@@ -28,7 +28,6 @@ export const ui = {
   brandName: line('brandName'),
   welcomeLede: line('welcomeLede'),
   contentDraftBanner: line('contentDraftBanner'),
-  stickerAskGrownUp: line('stickerAskGrownUp'),
   stickerSixFoods: line('stickerSixFoods'),
   stickerSessionTime: line('stickerSessionTime'),
   startInspecting: line('startInspecting'),
@@ -41,7 +40,6 @@ export const ui = {
   instruction3: line('instruction3'),
   instruction4: (count: number) => fill(line('instruction4'), { count }),
   reminderAskGrownUp: line('reminderAskGrownUp'),
-  reminderCompact: line('reminderCompact'),
   back: line('back'),
   letsGo: line('letsGo'),
   foodProgress: (n: number, total: number) =>
@@ -56,7 +54,6 @@ export const ui = {
     fill(line('pawsAria'), { earned, total }),
   answerGroupAria: line('answerGroupAria'),
   dogSnackLegend: line('dogSnackLegend'),
-  pipGreet: line('pipGreet'),
   pipRetry: line('pipRetry'),
   pipCorrect: line('pipCorrect'),
   misoHandoff: line('misoHandoff'),
